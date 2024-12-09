@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-image: url("/html-css/bg.jpeg");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      th,
+      td {
+        text-align: left;
+        padding: 8px;
+      }
+
+      tr:nth-child(even) {
+        background-color: #d6eeee;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Images</h3>
+    <img
+      src="/html-css/ss.jpeg"
+      alt="sky-scapper"
+      width="300px"
+      height="300px"
+    />
+    <!-- src="#geeks" can also be written to open that specific section -->
+    <a href="#"
+      ><img
+        src="/html-css/ss.jpeg"
+        alt="sky-scapper"
+        width="300px"
+        height="300px"
+    /></a>
+    <!-- img src="/images/html5.gif" alt="HTML5 Icon" style="width:128px;height:128px;"> -->
+
+    <!-- ----------------------------------------------------------------------- -->
+
+    <hr />
+    <!-- Identifier - Uniquely identfy each element -->
+    <h3 id="geeks">Identifier</h3>
+
+    <!-- ----------------------------------------------------------------------- -->
+
+    <hr />
+    <!-- Title - Used to give information by hovering -->
+    <h3 title="Title Attribute">Hover to see the effect</h3>
+
+    <!-- ----------------------------------------------------------------------- -->
+
+    <hr />
+    <h3>Float vs Align</h3>
+    <p>
+      <img
+        src="/html-css/ss.jpeg"
+        alt="Smiley face"
+        style="align-items: left; width: 42px; height: 42px"
+      />
+      A paragraph with a aliging image. A paragraph with a aliging image. A
+      paragraph with a aliging image.
+    </p>
+
+    <p>
+      <img
+        src="/html-css/ss.jpeg"
+        alt="Smiley face"
+        style="float: left; width: 42px; height: 42px"
+      />
+      A paragraph with a floating image. A paragraph with a floating image. A
+      paragraph with a floating image.
+    </p>
+
+    <!-- ----------------------------------------------------------------------- -->
+
+    <hr />
+    <h3>href</h3>
+    <!-- _self - Default. Opens the document in the same window/tab as it was clicked
+    _blank - Opens the document in a new window or tab
+    _parent - Opens the document in the parent frame
+    _top - Opens the document in the full body of the window -->
+    <a href="https://www.geeksforgeeks.org" target="_self">GFG</a>
+
+    <!-- ----------------------------------------------------------------------- -->
+
+    <hr />
+    <!-- Style in html -->
+    <h3 style="font-size: 20px">Style Attribute In HTML.</h3>
+
+    <!-- ----------------------------------------------------------------------- -->
+
+    <hr />
+    <h3>pre vs p</h3>
+    <!-- pre is used to keep white spaces -->
+    <pre>html     html</pre>
+    <p>html html</p>
+
+    <!-- ----------------------------------------------------------------------- -->
+
+    <hr />
+    <h3>sup</h3>
+    <p>E = mc<sup>2</sup></p>
+
+    <!-- ----------------------------------------------------------------------- -->
+
+    <hr />
+    <h3>bdo dir=rtl</h3>
+    <p>
+      <bdo dir="rtl">The quick brown fox jumps over the lazy dog</bdo>
+    </p>
+
+    <!-- ----------------------------------------------------------------------- -->
+
+    <hr />
+    <h3>List</h3>
+    <!-- Links(ul,ol,dl) -->
+    <p>Unordered list</p>
+    <ul>
+      <li>q</li>
+      <li>q</li>
+      <li>q</li>
+      <li>q</li>
+    </ul>
+    <!-- <ul style="list-style-type:disc;"></ul> -->
+
+    <p>Ordererd list</p>
+    <ol>
+      <li>w</li>
+      <li>w</li>
+    </ol>
+    <ol reversed>
+      <li>w</li>
+      <li>w</li>
+    </ol>
+    <ol start="4">
+      <li>w</li>
+      <li>w</li>
+    </ol>
+    <ol type="i">
+      <li>w</li>
+      <li>w</li>
+    </ol>
+
+    <p>Description list</p>
+    <dl>
+      <dt>Coffee</dt>
+      <dd>- 500 gms</dd>
+      <dt>Milk</dt>
+      <dd>- 1 ltr Tetra Pack</dd>
+    </dl>
+
+    <!-- ----------------------------------------------------------------------- -->
+    <hr />
+    <h3>Image maps</h3>
+    <img src="/html-css/ss.jpeg" alt="Workplace" usemap="#workmap" />
+
+    <map name="workmap">
+      <area shape="rect" coords="34,44,270,350" alt="Computer" href="#" />
+      <area shape="rect" coords="290,172,333,250" alt="Phone" href="#" />
+      <area shape="circle" coords="337,300,44" alt="Coffee" href="#" />
+
+      <!-- ----------------------------------------------------------------------- -->
+      <hr />
+    </map>
+
+    <!-- ----------------------------------------------------------------------- -->
+    <picture>
+      <source media="(min-width: 650px)" srcset="/html-css/bg.jpeg" />
+      <source media="(min-width: 465px)" srcset="/html-css/ss.jpeg" />
+      <img src="/html-css/bg.jpeg" />
+    </picture>
+
+    <!-- ----------------------------------------------------------------------- -->
+    <hr />
+    <h3>Table</h3>
+    <table>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Points</th>
+      </tr>
+      <tr>
+        <td>Peter</td>
+        <td>Griffin</td>
+        <td>$100</td>
+      </tr>
+      <tr>
+        <td>Lois</td>
+        <td>Griffin</td>
+        <td>$150</td>
+      </tr>
+      <tr>
+        <td>Joe</td>
+        <td>Swanson</td>
+        <td>$300</td>
+      </tr>
+    </table>
+
+    <!-- ----------------------------------------------------------------------- -->
+    <hr>
+    
+  </body>
+</html>

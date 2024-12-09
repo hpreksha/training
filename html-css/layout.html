@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      header {
+        background-color: aliceblue;
+        text-align: center;
+        padding: 20px;
+      }
+
+      section {
+        display: flex; /* This makes the nav and article side by side */
+        background-color: aqua;
+        height: 100vh;
+      }
+
+      nav {
+        flex: 1;
+        padding: 20px;
+        background-color: lightgray;
+        /* margin-right: 2px; */
+      }
+
+      nav ul {
+        padding: 0;
+      }
+
+      nav li {
+        list-style: none;
+        margin-bottom: 10px;
+      }
+      nav a:hover {
+        color: blue;
+        text-decoration: underline;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+      }
+
+      article {
+        flex: 3; /* This gives the article 3/4th of the width */
+        padding: 20px;
+        background-color: aquamarine;
+      }
+
+      footer {
+        text-align: center;
+        padding: 10px;
+        background-color: lightgray;
+      }
+    </style>
+  </head>
+  <body>
+    <header><h2>Header</h2></header>
+    <section>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Blogs</a></li>
+        </ul>
+      </nav>
+
+      <article>
+        <h3>Heading</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
+          perspiciatis non, ut nesciunt et animi similique voluptates a
+          dignissimos quasi, consequuntur repellat rerum assumenda tempore
+          repellendus autem itaque est praesentium. Est atque eius error
+          molestias vel nulla! Id vero nulla eligendi corporis, temporibus
+          soluta nisi sapiente voluptate similique itaque consectetur est
+          mollitia, rerum qui provident debitis odio perferendis officia quasi!
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
+          perspiciatis non, ut nesciunt et animi similique voluptates a
+          dignissimos quasi, consequuntur repellat rerum assumenda tempore
+          repellendus autem itaque est praesentium. Est atque eius error
+          molestias vel nulla! Id vero nulla eligendi corporis, temporibus
+          soluta nisi sapiente voluptate similique itaque consectetur est
+          mollitia, rerum qui provident debitis odio perferendis officia quasi!
+        </p>
+        <br />
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
+          perspiciatis non, ut nesciunt et animi similique voluptates a
+          dignissimos quasi, consequuntur repellat rerum assumenda tempore
+          repellendus autem itaque est praesentium. Est atque eius error
+          molestias vel nulla! Id vero nulla eligendi corporis, temporibus
+          soluta nisi sapiente voluptate similique itaque consectetur est
+          mollitia, rerum qui provident debitis odio perferendis officia quasi!
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
+          perspiciatis non, ut nesciunt et animi similique voluptates a
+          dignissimos quasi, consequuntur repellat rerum assumenda tempore
+          repellendus autem itaque est praesentium. Est atque eius error
+          molestias vel nulla! Id vero nulla eligendi corporis, temporibus
+          soluta nisi sapiente voluptate similique itaque consectetur est
+          mollitia, rerum qui provident debitis odio perferendis officia quasi!
+        </p>
+        <br />
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
+          perspiciatis non, ut nesciunt et animi similique voluptates a
+          dignissimos quasi, consequuntur repellat rerum assumenda tempore
+          repellendus autem itaque est praesentium. Est atque eius error
+          molestias vel nulla! Id vero nulla eligendi corporis, temporibus
+          soluta nisi sapiente voluptate similique itaque consectetur est
+          mollitia, rerum qui provident debitis odio perferendis officia quasi!
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
+          perspiciatis non, ut nesciunt et animi similique voluptates a
+          dignissimos quasi, consequuntur repellat rerum assumenda tempore
+          repellendus autem itaque est praesentium. Est atque eius error
+          molestias vel nulla! Id vero nulla eligendi corporis, temporibus
+          soluta nisi sapiente voluptate similique itaque consectetur est
+          mollitia, rerum qui provident debitis odio perferendis officia quasi!
+        </p>
+        <br />
+        <h3>Form</h3>
+        <form action="/html-css/basics.html">
+          <label for="fname">First name:</label><br />
+          <input type="text" id="fname" name="fname" autocomplete="on" /><br />
+          <label for="lname">Surname:</label><br />
+          <input type="text" id="lname" name="lname" /><br />
+          <label for="cars">Choose a car:</label>
+          <select id="cars" name="cars" size="3">
+
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="fiat">Fiat</option>
+            <option value="audi">Audi</option></select
+          ><br />
+          <input type="submit" value="Submit" />
+          <button type="button" onclick="alert('Hello World!')">Click Me!</button>
+        </form>
+      </article>
+    </section>
+    <footer>
+      <p>Footer</p>
+    </footer>
+  </body>
+</html>
