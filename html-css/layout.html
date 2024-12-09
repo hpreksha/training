@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="/html-css/style.css" />
     <style>
       header {
         background-color: aliceblue;
@@ -21,7 +22,6 @@
         flex: 1;
         padding: 20px;
         background-color: lightgray;
-        /* margin-right: 2px; */
       }
 
       nav ul {
@@ -30,23 +30,36 @@
 
       nav li {
         list-style: none;
-        margin-bottom: 10px;
+        flex: 1;
       }
       nav a:hover {
-        color: blue;
-        text-decoration: underline;
+        color: black;
+        background-color: white;
       }
 
       nav a {
         text-decoration: none;
-        color: black;
+        background-color: black;
+        color: white;
         font-weight: bold;
+        padding: 8px 10px 8px 10px;
+        text-align: center;
+        display: block; /* Make anchor tag block-level */
+        border: 2px solid black; /* Border around the anchor */
+        margin-bottom: 2px; /* Space between the links */
+        border-color: white;
+        border-radius:10px;
       }
 
       article {
         flex: 3; /* This gives the article 3/4th of the width */
         padding: 20px;
         background-color: aquamarine;
+      }
+
+      aside {
+        flex: 1;
+        padding-left: 1rem;
       }
 
       footer {
@@ -135,19 +148,64 @@
           <input type="text" id="lname" name="lname" /><br />
           <label for="cars">Choose a car:</label>
           <select id="cars" name="cars" size="3">
-
             <option value="volvo">Volvo</option>
             <option value="saab">Saab</option>
             <option value="fiat">Fiat</option>
             <option value="audi">Audi</option></select
           ><br />
           <input type="submit" value="Submit" />
-          <button type="button" onclick="alert('Hello World!')">Click Me!</button>
+          <button type="button" onclick="alert('Hello World!')">
+            Click Me!
+          </button>
         </form>
       </article>
+      <aside>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia
+          dolorum consequatur delectus at voluptates aliquam autem repellat id
+          et nihil nam voluptate dolor quos illo quo, accusantium explicabo,
+          expedita magni! Voluptates, iure laboriosam? Tempore incidunt
+          obcaecati voluptatibus dignissimos dolorem blanditiis mollitia
+          exercitationem eveniet dolore hic inventore veritatis pariatur
+          praesentium architecto, id quod accusamus voluptate est. Sapiente
+          molestias et delectus itaque!
+        </p>
+      </aside>
     </section>
     <footer>
       <p>Footer</p>
     </footer>
   </body>
 </html>
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  counter-reset: section;
+}
+
+h2::before {
+  counter-increment: section;
+  content: "Section " counter(section) ": ";
+}
+</style>
+</head>
+<body>
+
+<h1>Using CSS Counters</h1>
+
+<h2>HTML Tutorial</h2>
+<h2>CSS Tutorial</h2>
+<h2>JavaScript Tutorial</h2>
+<h2>Python Tutorial</h2>
+<h2>SQL Tutorial</h2>
+
+</body>
+</html>
+ -->
