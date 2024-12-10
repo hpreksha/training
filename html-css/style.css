@@ -11,7 +11,35 @@ Attribute selectors (select elements based on an attribute or attribute value) *
 /* padding */
 /* content */
 
+/* Positions
+- Static : normal flow of the page - default
+- Relative */
 
-body {
+/* The translate() method moves an element from its current position (according to the parameters given for the X-axis and the Y-axis). */
+
+/* body {
     color: black ;
-  }
+  } */
+
+#myCanvas {
+  border: 1px solid black;
+}
+#picCanvas {
+  border: 1px solid black;
+}
+.canv {
+  float:left;
+}
+#eg-video {
+  clear : both;
+  display: block;
+}
+.video-btns {
+  padding-top: 4px;
+  float : left;
+}
+#loc-btn {
+  margin-top: 10px;
+  display: block;
+  clear: both;
+}

@@ -14,8 +14,9 @@
 
       section {
         display: flex; /* This makes the nav and article side by side */
+        flex-direction: row;
         background-color: aqua;
-        height: 100vh;
+        /* height: 100vh; */
       }
 
       nav {
@@ -64,9 +65,16 @@
 
       footer {
         text-align: center;
-        padding: 10px;
+        /* padding: 10px; */
         background-color: lightgray;
       }
+      
+      @media screen and (max-width: 992px){
+        section {
+          flex-direction: column;
+        }
+      }
+
     </style>
   </head>
   <body>
@@ -141,23 +149,53 @@
         </p>
         <br />
         <h3>Form</h3>
-        <form action="/html-css/basics.html">
+        <form onsubmit="saveData(); return false;">
           <label for="fname">First name:</label><br />
           <input type="text" id="fname" name="fname" autocomplete="on" /><br />
+          
           <label for="lname">Surname:</label><br />
           <input type="text" id="lname" name="lname" /><br />
+          
           <label for="cars">Choose a car:</label>
           <select id="cars" name="cars" size="3">
             <option value="volvo">Volvo</option>
             <option value="saab">Saab</option>
             <option value="fiat">Fiat</option>
-            <option value="audi">Audi</option></select
-          ><br />
+            <option value="audi">Audi</option>
+          </select><br />
+          
           <input type="submit" value="Submit" />
-          <button type="button" onclick="alert('Hello World!')">
-            Click Me!
-          </button>
+          <button type="button" onclick="alert('Hello World!')">Click Me!</button>
         </form>
+      
+        <!-- Display the stored data here -->
+        <div id="storedData"></div>
+      
+        <script>
+          // Function to save data to localStorage
+          function saveData() {
+            var fname = document.getElementById("fname").value;
+            localStorage.setItem("fname", fname); // Save the first name to localStorage
+            displayStoredData();  // Display the stored data immediately after saving
+          }
+      
+          // Function to display stored data when the page loads
+          function displayStoredData() {
+            var storedFname = localStorage.getItem("fname");
+            var storedDataDiv = document.getElementById("storedData");
+            
+            if (storedFname) {
+              storedDataDiv.innerHTML = `<p>Hello ${storedFname}</p>`;
+            } else {
+              storedDataDiv.innerHTML = "<p>No data found in localStorage.</p>";
+            }
+          }
+      
+          // Call displayStoredData when the page loads to show stored information (if any)
+          window.onload = function() {
+            displayStoredData();
+          }
+        </script>
       </article>
       <aside>
         <p>

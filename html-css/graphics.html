@@ -1,0 +1,105 @@
+<!-- The <object> element defines an embedded object within an HTML document. -->
+<!-- <object width="100%" height="500px" data="snippet.html"></object> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/html-css/style.css" />
+  </head>
+  <body>
+    <div class="canv">
+      <canvas id="myCanvas" width="200" height="100">qq</canvas>
+      <script>
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.moveTo(0, 0);
+        ctx.lineTo(200, 50);
+        ctx.moveTo(200, 50);
+        ctx.lineTo(0, 100);
+        ctx.font = "30px Arial";
+        ctx.fillText("Hello World", 10, 50);
+        ctx.stroke();
+      </script>
+      <div style="display: none">
+        <img id="scream" width="220" height="277" src="/html-css/bg.jpeg" />
+      </div>
+      <canvas id="picCanvas" width="200" height="100">qq</canvas>
+      <script>
+        var c = document.getElementById("picCanvas");
+        var ptr = c.getContext("2d");
+        var img = document.getElementById("scream");
+        img.addEventListener("load", (e) => {
+          ptr.drawImage(img, 10, 10);
+        });
+      </script>
+      <svg width="400" height="180">
+        <rect
+          x="50"
+          y="20"
+          rx="20"
+          ry="20"
+          width="150"
+          height="150"
+          style="fill: red; stroke: black; stroke-width: 5; opacity: 0.5"
+        />
+        Sorry, your browser does not support inline SVG.
+      </svg>
+    </div>
+    
+    <video id="eg-video" width="320" height="240" controls>
+      <source src="/html-css/video_eg.mp4" type="video/mp4" />
+    </video>
+    <div class="video-btns">
+      <button onClick="play1()">Play</button>
+      <button onClick="pause1()">Pause</button>
+      <button onClick="mute()">Mute</button>
+      <button onClick="rewind()">Rewind</button>
+      <button onClick="fastForward()">Fast Forward</button>
+    </div>
+    <script>
+      var myVideo = document.getElementById("eg-video");
+
+      function play1() {
+        myVideo.play();
+      }
+      function pause1() {
+        myVideo.pause();
+      }
+      function mute() {
+        myVideo.muted = !myVideo.muted;
+      }
+      function rewind() {
+        myVideo.currentTime -= 2;
+      }
+
+      function fastForward() {
+        myVideo.currentTime += 2;
+      }
+    </script>
+
+   
+
+    <script>
+      var x = document.getElementById("loc");
+      function getLocation() {
+        if (navigator.geolocation) {
+          navigator.getLocation.getCurrentPosition(showPosition);
+        } else {
+          x.innerHTML = "Not allowed";
+        }
+      }
+      function showPosition(position) {
+        x.innerHTML =
+          "Latitude: " +
+          position.coords.latitude +
+          "<br>Longitude: " +
+          position.coords.longitude;
+      }
+    </script>
+     <button id = "loc-btn" onclick="getLocation()">Get your coordinates</button>
+     <p id="loc"></p>
+  </body>
+</html>
