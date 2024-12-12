@@ -1,0 +1,40 @@
+.our-story-in-numbers__cards {
+    position: relative; /* To allow absolute positioning of the pseudo-element */
+    flex: 1;
+    text-align: left;
+    min-width: 198px;
+    max-width: calc(20% - 1rem);
+    height: 288px;
+    box-shadow: 0px 40px 70px rgba(94, 3, 0, 0.4); /* Apply the shadow below the card */
+    background-color: white; /* Optional: Add background color to ensure readability */
+    overflow: hidden; /* Ensures the blurred circle doesn't overflow outside the card */
+}
+
+.our-story-in-numbers__cards::before {
+    content: ""; /* Create an empty element */
+    position: absolute;
+    top: 50%; /* Position at the center of the card */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Ensure it's centered */
+    width: 200px; /* Adjust size of the circle */
+    height: 200px; /* Adjust size of the circle */
+    background-color: rgba(255, 255, 255, 0.1); /* Light background color with transparency */
+    border-radius: 50%; /* Make it circular */
+    filter: blur(10px); /* Apply blur effect */
+    z-index: -1; /* Send the blurred background behind the card */
+}
+
+/* .our-story-in-numbers__cards::before {
+    content: ""; /* Create an empty element */
+    position: absolute;
+    top: 90%; /* Position at the center of the card */
+    left: 30%;
+    transform: translate(-50%, -50%); /* Ensure it's centered */
+    width: 200px; /* Adjust size of the circle */
+    height: 200px; /* Adjust size of the circle */
+    background-color: rgba(94, 3, 0, 0.4); /* Light background color with transparency */
+    border-radius: 50%; /* Make it circular */
+    filter: blur(30px); /* Apply blur effect */
+    z-index: -1; /* Send the blurred background behind the card */
+
+} */
