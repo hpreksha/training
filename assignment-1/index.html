@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Our Story In Numbers</title>
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
@@ -16,17 +16,16 @@
           <div class="our-story-in-numbers__title">Skilled Professionals</div>
           <div class="our-story-in-numbers__content">Skilled experts blending technical mastery with domain-specific expertise.</div>
         </div>
-        
         <div class="our-story-in-numbers__cards">
           <div class="our-story-in-numbers__symbol"></div>
-          <div class="our-story-in-numbers__count" data-target="14">14</div>
+          <div class="our-story-in-numbers__count" data-target="14">14+</div>
           <div class="our-story-in-numbers__title">Years of Experience</div>
           <div class="our-story-in-numbers__content">Years of delivering top-notch software innovations across diverse domains.</div>
         </div>
         <div class="our-story-in-numbers__cards">
           <div class="our-story-in-numbers__symbol"></div>
           <div class="our-story-in-numbers__count" data-target="100">100+</div>
-          <div class="our-story-in-numbers__title">Project Delivered</div>
+          <div class="our-story-in-numbers__title">Projects Delivered</div>
           <div class="our-story-in-numbers__content">Create business value from disruptions by embracing digital transformations.</div>
         </div>
         <div class="our-story-in-numbers__cards">
@@ -43,8 +42,34 @@
         </div>
       </div>
     </div>
-    
-    
-    
+    <script>
+      const counters = document.querySelectorAll('.our-story-in-numbers__count');
+      let hasAnimated = false;
+      document.querySelector('.our-story-in-numbers__tabs').addEventListener('mouseover', () => {
+        if (hasAnimated) return;
+        hasAnimated = true;
+   
+        counters.forEach(counter => {
+          const target = +counter.getAttribute('data-target');
+          const suffix = counter.textContent.includes('%') ? '%' : (counter.textContent.includes('+') ? '+' : ''); 
+          const increment = 1;
+          let count = 0;
+   
+          const updateCount = () => {
+            if (count < target) {
+              count += increment;
+              counter.textContent = `${Math.min(count, target)}${suffix}`;
+              setTimeout(updateCount, 4);
+            } else {
+              counter.textContent = `${target}${suffix}`;
+            }
+          };
+          updateCount();
+        });
+      });
+    </script>
+   
+   
+   
   </body>
 </html>
