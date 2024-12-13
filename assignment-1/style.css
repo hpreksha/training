@@ -40,9 +40,7 @@ body {
   min-width: 222px;
   max-width: 222px;
   height: 280px;
-  /* box-shadow: 0px 40px 70px rgba(94, 3, 0, 0.4); */
-  /* box-shadow: 15px 29px 32px 12px rgba(97, 15, 15, 0.32); */
-  -webkit-box-shadow: 2px 90px 120px -80px #febe10, 15px 80px 80px -79px #d91a60ef;
+  -webkit-box-shadow: -5px 90px 120px -85px #febe10, 15px 80px 80px -85px #d91a60ef;
 }
 
 .our-story-in-numbers__symbol {
@@ -126,7 +124,6 @@ body {
 }
 @media (min-width: 2560px) {
   .our-story-in-numbers__tabs {
-    padding-left: 513.5px;
     padding-top: 30px;
     gap: 80px;
   }
