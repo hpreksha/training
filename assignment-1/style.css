@@ -42,7 +42,7 @@ body {
   height: 280px;
   /* box-shadow: 0px 40px 70px rgba(94, 3, 0, 0.4); */
   /* box-shadow: 15px 29px 32px 12px rgba(97, 15, 15, 0.32); */
-  -webkit-box-shadow: 2px 90px 120px -85px #febe10, 10px 90px 70px -79px #d91a5f;
+  -webkit-box-shadow: 2px 90px 120px -80px #febe10, 15px 80px 80px -79px #d91a60ef;
 }
 
 .our-story-in-numbers__symbol {
