@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p {
+        width: 500px;
+        background-color: blue;
+      }
+      @media (min-width: 2560px) {
+        p {
+          width: 1000px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="host">This is the shadow host</div>
+
+    <script>
+      const host = document.getElementById("host");
+      const shadowRoot = host.attachShadow({ mode: "open" });
+      shadowRoot.innerHTML = `
+        <style>
+            p {
+                color: red;
+                font-size: 20px;
+            }
+        </style>
+        <p>This is inside the shadow DOM.</p>
+    `;
+    </script>
+    <p>p</p>
+  </body>
+</html>
