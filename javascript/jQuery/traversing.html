@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basics</title>
+    <style>
+        * {
+            list-style-type: none;
+            justify-content: left;
+            color: black;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // $("span").parentsUntil(".ggp").css({"color":"blue"}); //parent(), parents()
+            // $("ul").children("").css({"color":"blue"}); //find()
+            $("br").siblings().css({"color":"blue"}); //next(), nextAll(), nextUntil() same for prev
+            // first(). last(), eq(), filter(), not()
+        });
+    </script>
+    
+</head>
+<body>
+    <div class="gggp">Great-great-grandparent
+        <div class="ggp">Great-grandparent
+            <ul>Grandparent
+                <li>Parent
+                    <br>
+                    <span>Child</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!-- File Contents: DOM manipulation method. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basics</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#get_btn1").click(() => {
+          var temp = $("#get_eg").text();
+          $("#q").text(temp);
+        });
+        $("#get_btn2").click(() => {
+          var temp = $("#get_eg").html();
+          $("#q").text(temp);
+        });
+        $("#get_btn3").click(() => {
+          var temp = $("#test").val();
+          $("#q2").text(temp);
+        });
+        $("#href_btn").mouseenter(() => {
+          var temp = $("#href_eg").attr("href");
+          $("#q3").text(temp); //append to add text at end and prepend to add text at start.
+        });
+        $("#before_btn").click(function () {
+          $("#q4").before("<b>Before</b>");
+        });
+        $("#after_btn").click(function () {
+          $("#q4").after("<b>After</b>");
+        });
+        $("#empty_btn").click(function () {
+          $("#q5").empty();
+        });
+        $("#remove_btn").click(function () {
+          $("p").remove("#q5");
+        });
+        $("#css_btn").click(function () {
+          $("#q6").addClass("blue"); //removeClass, toggleClass, css("background-color"), css("background-color", "yellow"), css({"background-color": "yellow", "font-size": "200%"})
+        });
+      });
+    </script>
+    <style>
+        .blue {
+            color: blue;
+        }
+    </style>
+    }
+  </head>
+  <body>
+    <p id="get_eg">Get elements <b>example</b>.</p>
+    <p id="q"></p>
+    <button id="get_btn1">get text</button>
+    <button id="get_btn2">get html</button>
+
+    <hr />
+    <p>Name: <input type="text" id="test" value="Preksha" /></p>
+    <p id="q2"></p>
+    <button id="get_btn3">get value</button>
+
+    <hr />
+    <p>
+      <a href="/javascript/jQuery/effects.html" id="href_eg"></a>href Example
+    </p>
+    <button id="href_btn">href value</button>
+    <p id="q3"></p>
+
+    <hr />
+    <p id="q4">Insert before/after.</p>
+    <br>
+    <button id="before_btn">Before</button>
+    <button id="after_btn">After</button>
+
+    <hr />
+    <p id="q5">Remove text.</p>
+    <button id="empty_btn">Empty content</button>
+    <button id="remove_btn">Remove content</button>
+
+    <hr />
+    <p id="q6">Add CSS</p>
+    <button id="css_btn">Add CSS</button>
+  </body>
+</html>

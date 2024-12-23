@@ -1,0 +1,56 @@
+<!-- This file consists of bascis of jQuery(Types of jQeury selectors) -->
+ 
+<!-- jQuery - It is a lightweight javascript that simplifies the html dom manipulating, event handling and creating dynamic web experiences.
+It gives cross browser support. And faster loading.
+
+Syntax - $("selector").action() -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basics</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function() {
+                $("h2").hide();
+            });
+        });
+    </script>
+</head>
+<body>
+    <h2>jQuery hidden property</h2>
+    <button>Click to hide.</button>
+</body>
+</html>
+
+
+<!-- 
+* - all things
+this - element called it
+p.class
+p:first
+ul li:first
+ul li:first-child - first li of every ul
+[href]
+$("a[target='_blank']")
+$("a[target!='_blank']")
+$(":button")
+$("tr:even")
+-->
+
+<!-- Events:
+ click
+ dblclick
+ mouseenter
+ mouseleave
+ mousedown
+ mouseup
+ hover(func1whenmouseenters, func2when mouse leaves) 
+ focus
+ blur
+ on(one-more event handlers)
+
+-->

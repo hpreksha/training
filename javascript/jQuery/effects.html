@@ -1,0 +1,122 @@
+<!-- File Contents: jQuery Effects
+                    - Hide/Show
+                    - Fade
+                    - Slide
+                    - Animate/stop()
+                    - Callback And Chaining -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Effects</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#toggle_btn").click(function () {
+          $("#toggle").toggle();
+        });
+        $("#fade_btn").click(function () {
+          $("#div1").fadeIn();
+          $("#div2").fadeIn("slow");
+          $("#div3").fadeIn(3000);
+        });
+        $("#slide_panel").click(function () {
+          $("#slide_content").slideToggle("slow");
+        });
+        $("#animate_btn").click(function () {
+          let temp = $("#animate_eg");
+          temp.text(
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure voluptatem, atque dicta perspiciatis earum fuga omnis quam, corrupti facilis excepturi repudiandae quibusdam nihil eum temporibus doloremque dolore? Aspernatur, animi a?"
+          );
+          // temp.animate({left:'150px', height:'170px',},1000);
+          // temp.animate({fontSize:'1em'},"slow");
+          temp
+            .animate({ left: "150px", height: "170px" }, 1000)
+            .promise()
+            .done(function () {
+              console.log("First animation completed");
+              // Now perform the second animation after the first is done
+              temp
+                .animate({ fontSize: "1em" }, "slow")
+                .promise()
+                .done(function () {
+                  console.log("Second animation completed");
+                });
+                console.log("First animation completed"); 
+            });
+        });
+        $("#stop_animate_btn").click(() => {
+          $("#animate_eg").stop();
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <style>
+      #Slide_panel,
+      #slide_content {
+        padding: 5px;
+        text-align: center;
+        background-color: #e5eecc;
+        border: solid 1px #c3c3c3;
+      }
+      #slide_content {
+        padding: 50px;
+        display: none;
+      }
+      #animate_eg {
+        background-color: darkseagreen;
+        height: 100px;
+        width: 200px;
+        position: absolute;
+      }
+    </style>
+
+    <!-- Toggle text -->
+    <p>Hide/Show Example</p>
+    <button id="toggle_btn">Toggle visibilty of the text.</button>
+    <p id="toggle">Toggle text.</p>
+    <hr />
+
+    <!-- -------------------------------------------------------- -->
+    <!-- fadeIn/ fadeOut/ fadeToggle/ fadeTo -->
+    <p>Fade Example</p>
+    <button id="fade_btn">Click to fade in boxes</button><br /><br />
+    <div
+      id="div1"
+      style="width: 80px; height: 80px; display: none; background-color: red"
+    ></div>
+    <br />
+    <div
+      id="div2"
+      style="width: 80px; height: 80px; display: none; background-color: green"
+    ></div>
+    <br />
+    <hr />
+
+    <!-- -------------------------------------------------------- -->
+    <!-- slideDown/ slideUp/ slideToggle -->
+    <p>Slide Example</p>
+    <div id="slide_panel">Click to read more.</div>
+    <div id="slide_content">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil beatae
+      explicabo recusandae aut exercitationem omnis natus, excepturi
+      reprehenderit iusto assumenda, minima fugiat qui. Minima est eligendi
+      ratione repellendus id esse.
+    </div>
+
+    <!-- -------------------------------------------------------- -->
+    <!-- animate -->
+    <p>Start And Stop Animation Example.</p>
+    <hr />
+    <button id="animate_btn">Click to read more.</button>
+    <button id="stop_animate_btn">Stop animation.</button>
+    <div id="animate_eg">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates, fuga
+      dolore.
+    </div>
+  </body>
+</html>

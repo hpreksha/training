@@ -1,0 +1,23 @@
+<!-- File Content: NoConflict example -->
+<!-- What if other JavaScript frameworks also use the $ sign as a shortcut? -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basics</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $.noConflict();
+        jQuery(document).ready(function(){
+            jQuery("button").click(function() {
+                jQuery("h2").hide();
+            });
+        });
+    </script>
+</head>
+<body>
+    <h2>jQuery hidden property</h2>
+    <button>Click to hide.</button>
+</body>
+</html>
