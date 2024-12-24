@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basics</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        const allParagraphs = $(".container").find("p").css({"color":"blue"});//desecdents
+        const filteredParagraphs = allParagraphs.filter(".highlight").css({"color":"red"});//current selection
+      });
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <p class="highlight">Paragraph 1</p>
+      <p>Paragraph 2</p>
+      <div>
+        <p class="highlight">Paragraph 3</p>
+      </div>
+    </div>
+  </body>
+</html>
