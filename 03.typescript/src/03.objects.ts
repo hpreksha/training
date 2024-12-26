@@ -15,3 +15,9 @@ let obj_eg2 : {
     return x+y;
 }};
 // obj_eg2.id=2; // not allowed
+
+// Index signature
+const nameAgeMap: { [index: string]: number } = {};
+nameAgeMap.Jack = 25; // no error
+// nameAgeMap.Mark = "Fifty"; // Error: Type 'string' is not assignable to type 'number'.
+console.log(nameAgeMap);
