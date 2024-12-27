@@ -81,3 +81,30 @@ const readOnlyPerson: ReadOnlyPerson = {
     email: "bob@example.com"
 };
 // readOnlyPerson.name = "Alice"; // Error: Cannot assign to 'name' because it is a read-only property
+
+
+
+// type in inertface
+type Status = 'active' | 'inactive';
+
+interface User {
+  name: string;
+  status: Status;  // Here we use the Status type
+}
+
+const user2: User = {
+  name: 'Bob',
+  status: 'active',
+};
+
+interface Greet {
+  (name: string): string;
+}
+
+type Greeter = {
+  greet: Greet;
+};
+
+const greeter: Greeter = {
+  greet: (name) => `Hello, ${name}`,
+};

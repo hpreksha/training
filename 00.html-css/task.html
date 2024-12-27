@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main {
+            background-color: red;
+            height: 100px;
+            position: relative;
+            z-index: 1;
+        }
+        .over {
+            background-color: blue;
+            height: 500px;
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            z-index: 1001;
+        }
+        .below {
+            z-index: 999;
+            position: relative;
+            margin: 20px;
+            background-color: green;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">main
+        <div class="over">hi</div>
+    </div>
+    <div class="below">below</div>
+</body>
+</html>
