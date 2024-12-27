@@ -1,0 +1,63 @@
+{
+  "name": "training",
+  "version": "1.0.0",
+  "description": "This repository contains the projects and assignments completed during the internship program. The structure and purpose of each folder are detailed below.",
+  "homepage": "https://github.com/hpreksha/training#readme",
+  "bugs": {
+    "url": "https://github.com/hpreksha/training/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hpreksha/training.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "changelog": "auto-changelog"
+  },
+  "auto-changelog": {
+    "output": "CHANGELOG.md",
+    "template": "keepachangelog",
+    "unreleased": true
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.6.1",
+    "@commitlint/config-conventional": "^19.6.0",
+    "@release-it/conventional-changelog": "^9.0.4",
+    "auto-changelog": "^2.5.0",
+    "husky": "^9.1.7",
+    "release-it": "^17.11.0"
+  },
+  "release-it": {
+    "git": {
+      "commitMessage": "chore: release v${version}"
+    },
+    "github": {
+      "release": true
+    },
+    "npm": {
+      "publish": false
+    },
+    "plugins": {
+      "@release-it/conventional-changelog": {
+        "infile": "CHANGELOG.md",
+        "preset": {
+          "name": "conventionalcommits",
+          "types": [
+            {
+              "type": "feat",
+              "section": "Features"
+            },
+            {
+              "type": "fix",
+              "section": "Bug Fixes"
+            }
+          ]
+        }
+      }
+    }
+  }
+}
