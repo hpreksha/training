@@ -8,3 +8,12 @@ var Size;
 ;
 let size_eg = Size.Medium;
 console.log(size_eg);
+const Sizes = {
+    Small: 0,
+    Medium: 'q',
+    Large: 'q'
+};
+let sizeObj = Sizes.Medium;
+console.log(sizeObj);
+let sizeUnion = 'q';
+console.log(sizeUnion);

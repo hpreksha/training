@@ -11,4 +11,4 @@ let union_eg_obj : Type_alias_eg = {
     }
 
 }
-console.log(union_eg_obj.func());
+console.log(union_eg_obj.func()); // id: 1 name: qw

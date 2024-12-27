@@ -11,4 +11,4 @@ let tae_obj : Type_alias_eg = {
         return `id: $(this.id) name: ${this.name}`;
     }
 }
-console.log(tae_obj.func());
+console.log(tae_obj.func()); // id: 1 name: qw

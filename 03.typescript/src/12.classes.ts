@@ -26,4 +26,4 @@ class Person_eg {
 
 const person = new Person_eg("Jane");
 
-console.log(person.getName());
+console.log(person.getName()); // Jane
