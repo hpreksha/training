@@ -31,22 +31,8 @@
           temp.text(
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure voluptatem, atque dicta perspiciatis earum fuga omnis quam, corrupti facilis excepturi repudiandae quibusdam nihil eum temporibus doloremque dolore? Aspernatur, animi a?"
           );
-          // temp.animate({left:'150px', height:'170px',},1000);
-          // temp.animate({fontSize:'1em'},"slow");
-          temp
-            .animate({ left: "150px", height: "170px" }, 1000)
-            .promise()
-            .done(function () {
-              console.log("First animation completed");
-              // Now perform the second animation after the first is done
-              temp
-                .animate({ fontSize: "1em" }, "slow")
-                .promise()
-                .done(function () {
-                  console.log("Second animation completed");
-                });
-                console.log("First animation completed"); 
-            });
+          temp.animate({left:'150px', height:'170px',},1000);
+          temp.animate({fontSize:'1em'},"slow");
         });
         $("#stop_animate_btn").click(() => {
           $("#animate_eg").stop();

@@ -1,21 +1,75 @@
-<!-- This file consists of bascis of jQuery(Types of jQeury selectors) -->
- 
-<!-- jQuery - It is a lightweight javascript that simplifies the html dom manipulating, event handling and creating dynamic web experiences.
-It gives cross browser support. And faster loading.
-
-Syntax - $("selector").action() -->
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"></html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Basics</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $(document).ready(function(){
+            // Hide all h2 elements when button is clicked
             $("button").click(function() {
                 $("h2").hide();
+            });
+
+            // Hide all elements when the paragraph with class 'example' is clicked
+            $("p.example").click(function() {
+                $("*").hide();
+            });
+
+            // Hide the first paragraph when it is clicked
+            $("p:eq(1)").click(function() {
+                $(this).css("color", "red");
+            });
+
+            $("p:eq(2)").css("color", "orange");
+
+            // Hide the first list item of every unordered list when it is clicked
+            $("ul li:first-child").click(function() {
+                $(this).hide();
+            });
+
+            // Change the color of all links with target='_blank' to red
+            $("a[target='_blank']").css("color", "red");
+
+            // Change the color of all links with target!='_blank' to green
+            $("a[target!='_blank']").css("color", "green");
+
+            // Hide all even table rows
+            $("tr:even").hide();
+
+            // Event examples
+            $("#click").click(function() {
+                alert("Clicked!");
+            });
+
+            $("#dblclick").dblclick(function() {
+                alert("Double clicked!");
+            });
+
+            $("#mouseenter").mouseenter(function() {
+                alert("Mouse entered!");
+            });
+
+            $("#mouseleave").mouseleave(function() {
+                alert("Mouse left!");
+            });
+
+            $("#hover").hover(
+                function() {
+                    alert("Mouse entered!");
+                }, 
+                function() {
+                    alert("Mouse left!");
+                }
+            );
+
+            $("#focus").focus(function() {
+                $(this).css("background-color", "yellow");
+            });
+
+            $("#blur").blur(function() {
+                $(this).css("background-color", "white");
             });
         });
     </script>
@@ -23,34 +77,25 @@ Syntax - $("selector").action() -->
 <body>
     <h2>jQuery hidden property</h2>
     <button>Click to hide.</button>
+    <p class="example">Click me to hide everything.</p>
+    <p>First paragraph</p>
+    <p>q</p>
+    <ul>
+        <li>First item</li>
+        <li>Second item</li>
+    </ul>
+    <a href="https://example.com" target="_blank">Example link with _blank</a>
+    <a href="https://example.com" target="_self">Example link with _self</a>
+    <table>
+        <tr><td>Row 1</td></tr>
+        <tr><td>Row 2</td></tr>
+    </table>
+    <button id="click">Click me</button>
+    <button id="dblclick">Double click me</button>
+    <button id="mouseenter">Mouse enter me</button>
+    <button id="mouseleave">Mouse leave me</button>
+    <button id="hover">Hover over me</button>
+    <input type="text" id="focus" placeholder="Focus on me">
+    <input type="text" id="blur" placeholder="Blur from me">
 </body>
 </html>
-
-
-<!-- 
-* - all things
-this - element called it
-p.class
-p:first
-ul li:first
-ul li:first-child - first li of every ul
-[href]
-$("a[target='_blank']")
-$("a[target!='_blank']")
-$(":button")
-$("tr:even")
--->
-
-<!-- Events:
- click
- dblclick
- mouseenter
- mouseleave
- mousedown
- mouseup
- hover(func1whenmouseenters, func2when mouse leaves) 
- focus
- blur
- on(one-more event handlers)
-
--->
