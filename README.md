@@ -53,9 +53,11 @@ Contains TypeScript examples and projects, focusing on:
 2. Compile the TypeScript file: Use the TypeScript Compiler (tsc) to compile the .ts file into JavaScript. This will create a .js file in the dist folder.
    ```bash
    tsc filename.ts
-   or to compile all the files together
+   ```
+   To compile all the TypeScript files together:
    ```bash
    tsc
+   ```
 3. Run the compiled JavaScript file: Once the TypeScript file is compiled, use Node.js to run the generated JavaScript file from the dist folder.
    ```bash
    node dist/filename.js
