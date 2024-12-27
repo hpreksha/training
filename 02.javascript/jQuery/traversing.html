@@ -15,12 +15,23 @@
     <script>
         $(document).ready(function(){
             // $("span").parentsUntil(".ggp").css({"color":"blue"}); //parent(), parents()
-            // $("ul").children("").css({"color":"blue"}); //find()
-            $("br").siblings().css({"color":"blue"}); //next(), nextAll(), nextUntil() same for prev
-            // first(). last(), eq(), filter(), not()
+            // Grandparent, parent
+            // $("ul").children().css({"color":"green"}); //find()
+            //Parent
+            // $("span").siblings().css({"color":"red"}); //next(), nextAll(), nextUntil() same for prev
+            // Child1, child2
+            // $("li").contents().first().css({"color":"purple"}); // first()
+            // br
+            // $("li").first().css({"color":"purple"}); // first()
+            // Child1
+            // $("li").eq(0).css({"color":"pink"}); // eq()
+            // Parent
+            // $("li").filter(":contains('Parent')").css({"color":"orange"}); // filter()
+            // Parent
+            // $("li").not(":contains('Parent')").css({"color":"brown"}); // not()
+            // nothing
         });
     </script>
-    
 </head>
 <body>
     <div class="gggp">Great-great-grandparent
@@ -28,7 +39,9 @@
             <ul>Grandparent
                 <li>Parent
                     <br>
-                    <span>Child</span>
+                    <span>Child1</span>
+                    <br>
+                    <span>Child2</span>
                 </li>
             </ul>
         </div>
