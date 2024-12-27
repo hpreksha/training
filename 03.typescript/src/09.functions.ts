@@ -1,3 +1,6 @@
+// File Content : Functions in typescript
+
+
 function render(doc:any) {
     console.log(doc);
 }

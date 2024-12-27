@@ -1,3 +1,6 @@
+// Filee Content: Objects in TypeScript
+
+
 const object_eg : {id:number, name?:string} = {
     id:1
 }

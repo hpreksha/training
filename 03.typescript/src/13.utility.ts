@@ -1,3 +1,6 @@
+// File Content : Utility types in typescript : Utility types are pre-defined generic types in TypeScript. These utility types help to transform types from one form to another.
+
+
 interface Student {
     id: number,
     name: string,

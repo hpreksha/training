@@ -1,3 +1,6 @@
+// File Contents : Type aliases in typescript : Type aliases are used to create a new name for a type. This does not create a new type, it creates a new name to refer to that type.
+
+
 type Type_alias_eg = {
     readonly id: number,
     name: string,

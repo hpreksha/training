@@ -1,3 +1,6 @@
+// File Content : Casting in typescript
+
+
 let casting_eg: unknown = 'hello';
 
 console.log((casting_eg as string).length); // 5

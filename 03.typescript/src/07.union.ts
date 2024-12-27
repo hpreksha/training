@@ -1,3 +1,6 @@
+// File Contents : Union in typescript : Union types are used to combine multiple types into one type. Union types are used to define a variable with multiple types.
+
+
 type union_eg = {
     readonly id: number,
     name: string,

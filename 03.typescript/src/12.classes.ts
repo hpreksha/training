@@ -1,3 +1,6 @@
+// File Contents : Classes in typescript
+
+
 interface int_eg {
   id: number;
   name: string;

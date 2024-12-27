@@ -1,3 +1,6 @@
+// File Contents : Interface vs Type in typescript : Interfaces and types are used to define the structure of an object. Both are used to define an object type. An interface can also be used to define a function type, while a type cannot. An interface can also be used to define an object
+
+
 // 1. Declaration Merging with Interface
 interface Person {
   name: string;

@@ -1,3 +1,6 @@
+// File Contents : Interfaces in typescript : Interfaces are used to define the structure of an object. An interface can be used to define an object type.
+
+
 interface Rectangle {
     height:number,
     width:number

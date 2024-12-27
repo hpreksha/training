@@ -1,3 +1,6 @@
+// File Contents : Enums in typescript : Enums are used to define a collection of named constants. Enums are defined using the enum keyword.
+
+
 enum Size {Small=0, Medium='q', Large='q'};
 let size_eg : Size = Size.Medium;
 console.log(size_eg); // q

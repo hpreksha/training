@@ -1,3 +1,6 @@
+// File Contents : Intersection in typescript : Intersection types are used to combine multiple types into one type. Intersection types are used to define a variable with multiple types.
+
+
 type Linear_grad = {
     linear:() => void
 };
