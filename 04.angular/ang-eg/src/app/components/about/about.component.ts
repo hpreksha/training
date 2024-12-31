@@ -9,9 +9,9 @@ import { ActivatedRoute, RouterModule } from '@angular/router';
 })
 export class AboutComponent {
   private route = inject(ActivatedRoute);
-  public id: string | null = '';
+  // public id: string | null = '';
   ngOnInit() {
-   this.id = this.route.snapshot.paramMap.get('id');
-  console.log(this.id);
+  //  this.id = this.route.snapshot.paramMap.get('id');
+  // console.log(this.id);
   }
 }

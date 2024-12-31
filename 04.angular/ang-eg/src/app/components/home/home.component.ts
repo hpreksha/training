@@ -8,7 +8,7 @@ import { Router, RouterLink } from '@angular/router';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-
+  q="qq";
   // private router = inject(Router);
   constructor(private router: Router) {}
   navigate() {

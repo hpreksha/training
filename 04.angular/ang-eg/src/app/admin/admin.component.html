@@ -1,0 +1,76 @@
+<div class="card">
+  <div class="card-header">Add Course</div>
+  <div class="card-body">
+    <form #courseForm="ngForm" (ngSubmit)="onSubmit(courseForm)">
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Title</label>
+        <input
+          type="title"
+          class="form-control"
+          id="title"
+          name="title"
+          placeholder="Enter title"
+          #title="ngModel"
+          [(ngModel)]="model.title"
+          required
+        />
+        <!-- <div
+          *ngIf="title.invalid && (title.dirty || title.touched)"
+          class="text-danger"
+        >Title required</div>
+      </div> -->
+        @if(title.invalid && title.touched) {
+        <div class="text-danger">Title required</div>
+        }
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label"
+          >Decsription</label
+        >
+        <textarea
+          class="form-control"
+          id="description"
+          name="description"
+          #description="ngModel"
+          [(ngModel)]="model.description"
+          placeholder="Enter description"
+          rows="3"
+          required
+        ></textarea>
+        @if(description.invalid && description.touched) {
+        <div class="text-danger">Description required</div>
+        }
+      </div>
+      <div>
+        <label for="file">Choose a file</label>
+        <input
+          type="file"
+          id="file"
+          name="file"
+          accept="file/"
+          (change)="onFileSelected($event)"
+          ngModel
+          required
+        />
+        @if(cover) {
+        <div class="imageDiv" align="left">
+          <img [src]="cover" alt="cover" />
+        </div>
+        }
+        @if(showError) {
+        <div class="text-danger">Please select a file</div>
+        }
+
+      </div>
+      <div class="m-3" align="center">
+        <button
+          type="submit"
+          class="btn btn-primary btn-lg"
+          style="width: 10vw"
+        >
+          Save
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
