@@ -1,0 +1,19 @@
+<!-- pb = interpolation(number,string) + boolean -->
+<h1>{{title}}</h1>
+<h3>Property Binding</h3>
+Interpolation:
+<input type="text" name="uname" value="{{name}}" disabled="{{disabled}}"> 
+<!-- Output is not same in case of false -->
+<input type="checkbox" [checked]="disabled"> Disabled
+<br><br>
+Property Binding:
+<input type="text" name="uname" [value]="name" [disabled]="disabled">
+
+
+<!-- ------------------------------------------------------ -->
+<!-- Two way binding: Update and show property at the sametime. -->
+<br><br>
+<h3>Two Way Binding</h3>
+<input type = "text" [(ngModel)]="name">
+<input type = "text" [(ngModel)]="name">
+<p>Name:{{name}}</p>

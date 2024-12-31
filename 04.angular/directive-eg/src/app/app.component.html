@@ -1,0 +1,30 @@
+<!-- directives are classessthat give additional features to elements -->
+<!-- 
+1. Component Directive
+2. Structural Directive
+3. Attribute Directive -->
+
+
+<h1>{{ title }}</h1>
+<h1 appRedEl>{{ title }}</h1>
+<div *ngIf="isVisible">This div is conditionally visible.</div>
+<!-- Will be displayed if the value is true. -->
+
+<ul>
+  <li *ngFor="let itemq of item">{{ itemq }}</li>
+  <li *ngFor="let item of items">
+    <span *ngIf="item.visible">{{ item.name }}</span>
+  </li>
+</ul>
+
+<div [ngSwitch]="value">
+  <div *ngSwitchCase="'A'">Value is A</div>
+  <div *ngSwitchCase="'B'">Value is B</div>
+  <div *ngSwitchDefault>Value is unknown</div>
+</div>
+
+<!-- <div [ngClass]="{'active': isActive}">This div has conditional classes.</div>
+
+<div [ngStyle]="{'color': color}">This div has conditional styles.</div> -->
+
+<h1 (click)="onClick()" (mouseover)="onMouseOver()">Hover or click me!</h1>

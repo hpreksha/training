@@ -1,0 +1,27 @@
+.box {
+    background-color: #fff;
+    padding: 2vh 4vh;
+    height: 40vh;
+    width: 20rem;
+}
+.box {
+    background-color: #fff;
+    padding-top: 0px;
+    height: 30vh;
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.course-image img {
+    padding-top: 0px;
+    height: 90%;
+    width: 18rem;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.box p {
+    font-size: 0.75rem;
+}

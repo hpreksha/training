@@ -1,6 +1,25 @@
-<p>home works!</p>
+<!-- <p>home works!</p> -->
 <!-- <a routerLink="/about">About</a> -->
-<br>
-<a [routerLink]="['/','about', 2]">About</a>
-<br>
+<!-- <br> -->
+<!-- <a [routerLink]="['/','about', 2]">About</a> -->
+<!-- <br> -->
 <!-- <a (click)="navigate()">About</a> -->
+
+<section>
+    <img src="imgs/bg.jpg" alt="Notes" class="img-fluid">
+
+    <div class="main-content">
+        <h1 class="mt-2">Welcome to Notes</h1>
+        <a class="btn btn-lg btn-light mt-2 mx-2" style="background: transparent; border: 1px solid rgba(0, 0, 0, 0.5); backdrop-filter: blur(20px);">Courses</a>
+        <a class="btn btn-lg btn-light mt-2 mx-1" style="background: transparent; border: 1px solid rgba(0, 0, 0, 0.5); backdrop-filter: blur(20px);">Templates</a>
+    </div>
+</section>
+
+<section class="courses">
+    <div class="container">
+        <h1 class="text-center">All Courses</h1>
+        <div class="row mt-5">
+            <app-courses></app-courses>
+        </div>
+    </div>
+</section>

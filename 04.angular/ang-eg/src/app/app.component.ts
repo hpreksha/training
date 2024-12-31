@@ -5,9 +5,10 @@ import {HomeComponent} from './components/home/home.component'; // Importing the
 import {AboutComponent} from './components/about/about.component'; // Importing the component
 import { ClassEg } from './class-eg';
 import {HeaderComponent} from './header/header.component'; // Importing the component
+import {CoursesComponent} from './courses/courses.component'; // Importing the component
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, RouterLink, HeaderComponent], // Importing the component
+  imports: [RouterOutlet, RouterLink, HeaderComponent, CoursesComponent], // Importing the component
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
