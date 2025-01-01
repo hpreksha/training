@@ -1,0 +1,17 @@
+<!-- Template driven forms -->
+<form #loginForm="ngForm" (ngSubmit)="userLogin(loginForm.value)">
+    <br>
+    Name: <input type="text" name="username" ngModel required>
+    <br><br>
+    Password: <input type="password" name="password" ngModel required>
+    <br><br>
+    <button>Login</button>
+</form>
+<form #loginForm1="ngForm" (ngSubmit)="userLogin(loginForm1.value)">
+    <br>
+    Name: <input type="text" name="username" ngModel required>
+    <br><br>
+    Password: <input type="password" name="password" ngModel required>
+    <br><br>
+    <button>Login</button>
+</form>

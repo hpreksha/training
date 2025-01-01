@@ -1,0 +1,9 @@
+<form [formGroup]="loginForm" (ngSubmit)="loginUser()">
+  <br />
+  Name: <input type="text" name="username" formControlName="username" />
+  <br />
+  <span *ngIf="username && username.invalid && username.touched">Not valid</span><br />
+  Password: <input type="password" name="password" formControlName="password" />
+  <br /><br />
+  <button [disabled]="loginForm.invalid">Login</button>
+</form>
