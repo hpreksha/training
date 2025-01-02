@@ -13,12 +13,21 @@ import {
   styleUrl: './reactive-forms.component.css',
 })
 export class ReactiveFormsComponent {
+  
   loginForm = new FormGroup({
     username: new FormControl('', [Validators.required, Validators.email]),
-    password: new FormControl(''),
+    password: new FormControl('',[Validators.minLength(4)]),
   });
-  loginUser() {}
+  loginUser() {
+    this.onclick();
+  }
   get username() {
     return this.loginForm.get('username');
+  }
+  get password() {
+    return this.loginForm.get('password');
+  }
+  onclick() {
+    alert("Form Submitted");
   }
 }
