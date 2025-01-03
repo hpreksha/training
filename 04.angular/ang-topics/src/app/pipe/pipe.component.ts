@@ -8,11 +8,7 @@ import { CurrencyPipe, DatePipe, TitleCasePipe } from '@angular/common';
   styleUrls: ['./pipe.component.css']
 })
 export class PipeComponent {
-  birthday: Date = new Date(1990, 1, 1); // February 1, 1990
-  amount: number = 12345;
+  birthday: Date = new Date(2025, 0, 1);
+  amount: number = 12345.111111;
   title: string = 'hello world';
-
-  get format() {
-    return 'shortDate';
-  }
 }

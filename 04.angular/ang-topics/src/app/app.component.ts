@@ -5,23 +5,20 @@ import { DirectiveComponent } from './directive/directive.component';
 import { HomeComponent } from "./home/home.component";
 import { Location } from '@angular/common';
 import { CompEgComponent } from './comp-eg/comp-eg.component';
-import {Comp1Component} from './comp1/comp1.component';
+import { ParentComponent } from '../app/compRel/parent/parent.component';
+import { ChildComponent } from '../app/compRel/parent/child/child.component';
+import { Child2Component } from '../app/compRel/parent/child2/child2.component';
 @Component({
   selector: 'app-root',
-  imports: [Comp1Component,RouterOutlet, CompEgComponent, BindingComponent, DirectiveComponent, HomeComponent, Comp1Component],
+  imports: [RouterOutlet, CompEgComponent, BindingComponent, DirectiveComponent, HomeComponent, ParentComponent, ChildComponent, Child2Component],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
   title = 'ang-topics';
-  parentMessage = 'Hello from Parent Component!';
-  parentMessage1 : string|undefined;
   constructor(private location: Location) {}
 
   goBack(): void {
     this.location.back();
-  }
-  addItem(msg: string) {
-    this.parentMessage1 = msg;
   }
 }

@@ -1,4 +1,4 @@
-
+=
 # Internship
 
 This repository contains the projects and assignments completed during the internship program. The structure and purpose of each folder are detailed below.
@@ -32,6 +32,13 @@ Contains TypeScript examples and projects, focusing on:
 - TypeScript Object-Oriented Programming
 - TypeScript Utility Types
 
+### 04.angular
+Includes topic wise examples of Angular:
+- ngModules, Standalone components
+- Directives, Forms
+- Interpolation, Property Binding, Two-way Binding
+- Pipes, Signals, Services
+
 # How to Use
 ## For HTML/JavaScript files:
 1. Clone the repository to your local machine:
@@ -48,7 +55,7 @@ Contains TypeScript examples and projects, focusing on:
 - This will open the HTML file in your default web browser, and it will automatically refresh when you make changes to the HTML or JavaScript files.
 
 ## For TypeScript files:
-1. Navigate to the TypeScript file folder: Use the terminal or command prompt to move to the folder containing the TypeScript files.
+1. Navigate to the TypeScript file folder: Use thecreate terminal or command prompt to move to the folder containing the TypeScript files.
    ```bash
    cd path/to/your/03.typescript
 2. Compile the TypeScript file: Use the TypeScript Compiler (tsc) to compile the .ts file into JavaScript. This will create a .js file in the dist folder.
@@ -62,3 +69,26 @@ Contains TypeScript examples and projects, focusing on:
    ```bash
    node dist/filename.js
 4. View the output: The output will appear in the console, and you will find the generated .js file inside the dist folder.
+
+## For Angular files:
+1. Navigate to the Angular file folder: Use the terminal or command prompt to move to the folder containing the TypeScript files.
+   ```bash
+   cd path/to/your/04.angular
+2. Navigate to specific folder
+   ```bash
+   cd ang-eg-module
+   ````
+   ```bash
+   cd ang-eg
+   ```
+   ```bash
+   cd ang-topics
+   ```
+3. To install required dependencies
+   ```bash
+   npm install
+   ```
+4. To run
+   ```bash
+   ng serve -o
+
