@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, viewChild } from '@angular/core';
 import { ChildComponent } from '../parent/child/child.component';
 import { Child2Component } from '../parent/child2/child2.component';
 @Component({
@@ -18,5 +18,12 @@ export class ParentComponent {
   msgFromChild: string = '';
   getMessage(value: string) {
     this.msgFromChild = value;
+  }
+
+  // ------------------------------------------
+  @ViewChild(ChildComponent) ref: ChildComponent | undefined;
+  headerText: string|undefined;
+  onClick() {
+    this.headerText = this.ref?.msg;
   }
 }

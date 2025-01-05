@@ -10,5 +10,5 @@ import { ParentComponent } from '../parent.component';
 export class ChildComponent {
 
   @Input() msgFromParent:string|undefined;
-  
+  msg = 'ViewChild example, from child component.';
 }

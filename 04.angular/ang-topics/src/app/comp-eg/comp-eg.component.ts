@@ -7,11 +7,19 @@ import { Component, Input, OnInit, OnChanges, DoCheck, AfterContentInit, AfterCo
 })
 export class CompEgComponent implements OnInit, OnChanges, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy {
   @Input() message: string | undefined; // Define an @Input property
-
+  @Input() name: string | undefined;
+  setMessage() {
+    this.message = "Hello World";
+    console.log(`Message has been set to: ${this.message}`);
+  }
+  setName() {
+    this.name = "preksha";
+    console.log(`Name has been set to: ${this.name}`);
+  }
   constructor() {
     console.log('CompEgComponent Constructor called');
   }
-
+  
   ngOnChanges(changes: SimpleChanges) {
     console.log('CompEgComponent ngOnChanges called', changes);
   }
@@ -42,5 +50,8 @@ export class CompEgComponent implements OnInit, OnChanges, DoCheck, AfterContent
 
   ngOnDestroy() {
     console.log('CompEgComponent ngOnDestroy called');
+  }
+  afterRender() {
+    console.log('CompEgComponent afterRender called');
   }
 }

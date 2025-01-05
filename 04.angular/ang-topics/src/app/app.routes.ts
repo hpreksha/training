@@ -13,7 +13,9 @@ import { ParentComponent } from './compRel/parent/parent.component';
 import { ChildComponent } from '../app/compRel/parent/child/child.component';
 import { Child2Component } from '../app/compRel/parent/child2/child2.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import {CompEgComponent} from './comp-eg/comp-eg.component';
 export const routes: Routes = [
+    {path: 'comp-eg', component: CompEgComponent, pathMatch: 'full'},
     {title:'Pipe Example', path: 'pipe', component: PipeComponent, pathMatch: 'full'},
     {path: 'httpclient', component: HttpclientComponent, pathMatch: 'full'},
     {path: 'rform', component: ReactiveFormsComponent, pathMatch: 'full'},
