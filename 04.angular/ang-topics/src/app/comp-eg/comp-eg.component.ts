@@ -3,7 +3,6 @@ import { Component, Input, OnInit, OnChanges, DoCheck, AfterContentInit, AfterCo
 @Component({
   selector: 'app-comp-eg',
   templateUrl: './comp-eg.component.html',
-  styleUrls: ['./comp-eg.component.css']
 })
 export class CompEgComponent implements OnInit, OnChanges, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy {
   @Input() message: string | undefined; // Define an @Input property

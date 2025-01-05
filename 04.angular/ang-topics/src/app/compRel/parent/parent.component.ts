@@ -5,7 +5,6 @@ import { Child2Component } from '../parent/child2/child2.component';
   selector: 'app-parent',
   imports: [ChildComponent, Child2Component],
   templateUrl: './parent.component.html',
-  styleUrl: './parent.component.css',
   standalone: true,
 })
 export class ParentComponent {

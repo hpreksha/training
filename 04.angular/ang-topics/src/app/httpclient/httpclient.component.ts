@@ -6,7 +6,6 @@ import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
   selector: 'app-httpclient',
   imports: [NgFor, NgIf, ReactiveFormsModule],
   templateUrl: './httpclient.component.html',
-  styleUrl: './httpclient.component.css'
 })
 export class HttpclientComponent {
   // http = inject(HttpClient);

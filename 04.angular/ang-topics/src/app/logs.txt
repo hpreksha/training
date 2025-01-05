@@ -1,0 +1,35 @@
+import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { catchError } from 'rxjs/operators';
+import { of } from 'rxjs';
+
+@Component({
+  selector: 'app-error-handler',
+  template: `
+    <h1>{{errorMessage}}</h1>
+  `
+})
+export class ErrorHandlerComponent {
+  errorMessage: string = '';
+
+  constructor(private http: HttpClient) {
+    this.getData();
+  }
+
+  getData() {
+    this.http.get('https://api.example.com/data').pipe(
+      catchError(error => {
+        if (error.status === 404) {
+          this.errorMessage = '404 - Page Not Found';
+        } else if (error.status === 500) {
+          this.errorMessage = '500 - Internal Server Error';
+        } else if (error.status === 403) {
+          this.errorMessage = '403 - Forbidden';
+        } else {
+          this.errorMessage = 'Unknown Error Occurred';
+        }
+        return of(null); // Return empty observable to prevent crashing
+      })
+    ).subscribe();
+  }
+}

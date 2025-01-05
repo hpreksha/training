@@ -6,7 +6,6 @@ import { CstmPipePipe } from '../cstm-pipe.pipe';
   selector: 'app-pipe',
   imports: [CommonModule, CstmPipePipe],
   templateUrl: './pipe.component.html',
-  styleUrls: ['./pipe.component.css']
 })
 export class PipeComponent {
   birthday: Date = new Date(2025, 0, 1);

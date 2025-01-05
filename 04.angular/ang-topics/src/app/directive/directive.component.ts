@@ -6,7 +6,6 @@ import { NgIf, NgFor, CommonModule } from '@angular/common';
   selector: 'app-directive',
   imports: [RedElDirective, NgIf, NgFor, CommonModule],
   templateUrl: './directive.component.html',
-  styleUrl: './directive.component.css'
 })
 export class DirectiveComponent {
   // value1 = input(0);

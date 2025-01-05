@@ -3,7 +3,6 @@ import { Component, signal, computed, effect } from '@angular/core';
 @Component({
   selector: 'app-signal',
   templateUrl: './signal.component.html',
-  styleUrls: ['./signal.component.css']
 })
 export class SignalComponent {
   title = 'signal-eg';

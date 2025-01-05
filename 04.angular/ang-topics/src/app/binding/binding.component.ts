@@ -5,7 +5,6 @@ import { FormsModule } from '@angular/forms';
   selector: 'app-binding',
   imports: [RouterOutlet,FormsModule],
   templateUrl: './binding.component.html',
-  styleUrl: './binding.component.css'
 })
 export class BindingComponent {
   title = 'binding-eg';

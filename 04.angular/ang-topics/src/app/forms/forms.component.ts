@@ -4,7 +4,6 @@ import {FormControl, FormsModule} from '@angular/forms';
   selector: 'app-forms',
   imports: [FormsModule],
   templateUrl: './forms.component.html',
-  styleUrl: './forms.component.css'
 })
 export class FormsComponent {
   userLogin(item:any) {
