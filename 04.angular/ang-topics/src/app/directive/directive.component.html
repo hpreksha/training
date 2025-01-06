@@ -5,17 +5,20 @@
 3. Attribute Directive -->
 
 <h1>{{ title }}</h1>
-<h1 appRedEl>{{ title }}</h1>
+<h2>Custom directive</h2>
+<h3 appRedEl>{{ title }}</h3>
+<h2>*ngIf example</h2>
 <div *ngIf="isVisible">This div is conditionally visible.</div>
 <!-- Will be displayed if the value is true. -->
 
+<h2>*ngFor example</h2>
 <ul>
   <li *ngFor="let itemq of item">{{ itemq }}</li>
   <li *ngFor="let item of items">
     <span *ngIf="item.visible">{{ item.name }}</span>
   </li>
 </ul>
-
+<h2>*ngSwitch example</h2>
 <div [ngSwitch]="value">
   <div *ngSwitchCase="'A'">Value is A</div>
   <div *ngSwitchCase="'B'">Value is B</div>
@@ -23,8 +26,9 @@
 </div>
 
 
-<h1 (click)="onClick()" (mouseover)="onMouseOver()">Hover or click me!</h1>
-
+<h3 (click)="onClick()" (mouseover)="onMouseOver()">Hover or click me!</h3>
+<h2>ngClass example</h2>
+<div [ngClass]="isVisible ? 'special' : ''">This div is special</div>
 
 
 <!-- <input type="text" [value]="value1" />

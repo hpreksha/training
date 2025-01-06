@@ -1,7 +1,8 @@
 <p>parent works!</p>
 <!-- <p>{{msgToChild}}</p> -->
 <button (click)="sendMessage()">Send Message To Child</button>
-<app-child [msgFromParent]="msgToChild"></app-child>
+<app-child [msgFromParent]="msgToChild">
+</app-child>
 <!-- ------------------------------------ -->
 <app-child2 (newMessage)="getMessage($event)"></app-child2>
 <p>{{msgFromChild}}</p>

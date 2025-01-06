@@ -14,7 +14,11 @@ import { ChildComponent } from '../app/compRel/parent/child/child.component';
 import { Child2Component } from '../app/compRel/parent/child2/child2.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import {CompEgComponent} from './comp-eg/comp-eg.component';
+import { Sibling1Component } from './sibling-comm/sibling1/sibling1.component';
+import { Sibling2Component } from './sibling-comm/sibling2/sibling2.component';
 export const routes: Routes = [
+    {path: 'sibling1', component: Sibling1Component, pathMatch: 'full'},
+    {path: 'sibling2', component: Sibling2Component, pathMatch: 'full'},
     {path: 'comp-eg', component: CompEgComponent, pathMatch: 'full'},
     {title:'Pipe Example', path: 'pipe', component: PipeComponent, pathMatch: 'full'},
     {path: 'httpclient', component: HttpclientComponent, pathMatch: 'full'},
@@ -41,6 +45,6 @@ export const routes: Routes = [
     {path: 'parentc', component: ParentComponent, pathMatch: 'full'},
     {path: 'child', component: ChildComponent, pathMatch: 'full'},
     {path: 'child2', component: Child2Component, pathMatch: 'full'},
-    {path: '**', component: PageNotFoundComponent, pathMatch: 'full'}
+    {path: '**', component: PageNotFoundComponent, pathMatch: 'full'},
     // {path:'**', component: HomeComponent}
 ];

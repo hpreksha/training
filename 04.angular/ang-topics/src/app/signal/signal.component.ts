@@ -1,4 +1,4 @@
-import { Component, signal, computed, effect } from '@angular/core';
+import { Component, signal, computed, effect, untracked } from '@angular/core';
 
 @Component({
   selector: 'app-signal',
@@ -13,10 +13,14 @@ export class SignalComponent {
   }
 
   // Computed value for double the count
-  doubleCount = computed(() => this.count() * 2);
+  doubleCount = computed(() => {this.count() * 2
+  });
   constructor() {
     effect(() => {
-      console.log(`The current count is: ${this.count()}`);
+      // console.log(`The current count is: ${this.count()}`);
+      untracked(() => {
+        console.log(`The current color is: ${this.count()}`);
+      });
     });
   }
 }
