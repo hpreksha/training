@@ -10,7 +10,6 @@ import { CoursesComponent } from "../../courses/courses.component";
 })
 export class HomeComponent {
   q="qq";
-  // private router = inject(Router);
   constructor(private router: Router) {}
   navigate() {
     this.router.navigate(['/about']);

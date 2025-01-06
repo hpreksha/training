@@ -3,9 +3,8 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-comp2',
   standalone: false,
-  
-  templateUrl: './comp2.component.html',
-  styleUrl: './comp2.component.css'
+  template: `<p>comp2 works!</p>
+`,
 })
 export class Comp2Component {
 title = 'comp2';
