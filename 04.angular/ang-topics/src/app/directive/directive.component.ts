@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component } from '@angular/core';
 // import { DirectiveComponent } from './directive.component';
 import { RedElDirective } from '../red-el.directive';
 import { NgIf, NgFor, CommonModule, NgClass } from '@angular/common';
@@ -13,9 +13,6 @@ import { NgIf, NgFor, CommonModule, NgClass } from '@angular/common';
   templateUrl: './directive.component.html',
 })
 export class DirectiveComponent {
-  // value1 = input(0);
-  // value1 = input.required<number>();
-  //main.ts:5  ERROR RuntimeError: NG0950: Input is required but no value is available yet.
   title = 'directive-eg';
   isVisible = true;
   item = [1, 2, 3, 4];

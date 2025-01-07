@@ -7,6 +7,11 @@ import { Component, Input, OnInit, OnChanges, DoCheck, AfterContentInit, AfterCo
 export class CompEgComponent implements OnInit, OnChanges, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy {
   @Input() message: string | undefined; // Define an @Input property
   @Input() name: string | undefined;
+  value = 0;
+  setValue()  {
+    this.value = 10;
+    console.log(`Value has been set to: ${this.value}`);
+  }
   setMessage() {
     this.message = "Hello World";
     console.log(`Message has been set to: ${this.message}`);

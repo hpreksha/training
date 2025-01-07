@@ -9,5 +9,5 @@ import { FormsModule } from '@angular/forms';
 export class BindingComponent {
   title = 'binding-eg';
   name="John";
-  disabled=false;
+  disabled=true;
 }

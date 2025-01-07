@@ -1,13 +1,14 @@
+<!-- File Content: Interpolation, Property Binding, Two way binding -->
+
 <!-- pb = interpolation(number,string) + boolean -->
 <h1>{{title}}</h1>
 <h3>Property Binding</h3>
-Interpolation:
+Interpolation(Boolean will not work in interpolation):
 <input type="text" name="uname" value="{{name}}" disabled="{{disabled}}"> 
 <!-- Output is not same in case of false -->]
 <br>
-disabled:True/False
-<input type="checkbox" [checked]="disabled"> Disabled
-<br><br>
+disabled:{{disabled}}
+<br>
 Property Binding:
 <input type="text" name="uname" [value]="name" [disabled]="disabled">
 
@@ -16,6 +17,6 @@ Property Binding:
 <!-- Two way binding: Update and show property at the sametime. -->
 <br><br>
 <h3>Two Way Binding</h3>
-<input type = "text" [(ngModel)]="name">
+<input type = "text" [(ngModel)]="name" [disabled]="disabled">
 <input type = "text" [(ngModel)]="name">
 <p>Name:{{name}}</p>
