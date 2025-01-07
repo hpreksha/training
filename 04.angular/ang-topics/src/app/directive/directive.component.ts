@@ -1,3 +1,4 @@
+// File Content: Directives
 import { Component } from '@angular/core';
 // import { DirectiveComponent } from './directive.component';
 import { RedElDirective } from '../red-el.directive';

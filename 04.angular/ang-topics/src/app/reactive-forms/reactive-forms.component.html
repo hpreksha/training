@@ -6,7 +6,7 @@
   <span *ngIf="username && username.invalid && username.touched">Not valid</span><br />
   Password: <input type="password" placeholder="Enter password" name="password" formControlName="password" />
   <br /><br />
-  <button (click)="onclick()"  [disabled]="loginForm.invalid">Login</button>
+  <button (click)="onclick()" [disabled]="loginForm.invalid">Login</button>
 </form>
 username: {{ username?.value}}
 <br>

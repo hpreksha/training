@@ -1,3 +1,4 @@
+// File Content: Signal example
 import { Component, signal, computed, effect, untracked } from '@angular/core';
 
 @Component({

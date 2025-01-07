@@ -1,3 +1,4 @@
+// File Content: Component Lifecycle Methods
 import { Component, Input, OnInit, OnChanges, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy, SimpleChanges } from '@angular/core';
 
 @Component({

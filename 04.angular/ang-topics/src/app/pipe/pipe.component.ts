@@ -1,3 +1,4 @@
+// File Content: Pipe examples
 import { Component, Pipe } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CurrencyPipe, DatePipe, TitleCasePipe } from '@angular/common';

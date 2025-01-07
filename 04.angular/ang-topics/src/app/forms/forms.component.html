@@ -1,17 +1,20 @@
 <h2>Template driven forms</h2>
 <form #loginForm="ngForm" (ngSubmit)="userLogin(loginForm.value)">
     <br>
-    Name: <input type="text" name="username" ngModel required>
+    Name: 
+    <input type="text" name="username" ngModel required #username="ngModel">
+    <div *ngIf="username.invalid && username.touched" style="color: red;">
+      Username is required.
+    </div>
     <br><br>
-    Password: <input type="password" name="password" ngModel required>
+  
+    Password: 
+    <input type="password" name="password" ngModel required #password="ngModel">
+    <div *ngIf="password.invalid && password.touched" style="color: red;">
+      Password is required.
+    </div>
     <br><br>
-    <button>Login</button>
-</form>
-<form #loginForm1="ngForm" (ngSubmit)="userLogin(loginForm1.value)">
-    <br>
-    Name: <input type="text" name="username" ngModel required>
-    <br><br>
-    Password: <input type="password" name="password" ngModel required>
-    <br><br>
-    <button>Login</button>
-</form>
+  
+    <button [disabled]="loginForm.invalid">Login</button>
+  </form>
+  

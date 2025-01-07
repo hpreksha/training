@@ -1,3 +1,5 @@
+// File Content: Parent to child message.
+
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { ParentComponent } from '../parent.component';
 @Component({

@@ -1,3 +1,4 @@
+// File Content: Sibling communication using event emitter
 import { EventEmitter, Injectable } from '@angular/core';
 
 @Injectable({

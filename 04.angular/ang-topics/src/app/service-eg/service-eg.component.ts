@@ -1,3 +1,4 @@
+// File Content: Component using service
 import { Component } from '@angular/core';
 import { UserdataService } from '../services/userdata.service';
 import {NgFor} from '@angular/common';
