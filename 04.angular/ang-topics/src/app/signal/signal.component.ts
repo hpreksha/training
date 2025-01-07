@@ -6,16 +6,24 @@ import { Component, signal, computed, effect, untracked } from '@angular/core';
   templateUrl: './signal.component.html',
 })
 export class SignalComponent {
+
   title = 'signal-eg';
   count = signal(0);
+  obj_eg = {id:1, name:"preksha"};
+  obj_eg_signal = signal(this.obj_eg);
   // Method to increment the count
   inc() {
     this.count.set(this.count() + 1);
   }
 
   // Computed value for double the count
-  doubleCount = computed(() => {this.count() * 2
+  doubleCount = computed(() => {this.count() * 2;
   });
+
+  changeId() {
+    this.obj_eg["id"] = 2;
+  }
+
   constructor() {
     effect(() => {
       // console.log(`The current count is: ${this.count()}`);

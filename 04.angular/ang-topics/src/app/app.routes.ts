@@ -16,7 +16,11 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import {CompEgComponent} from './comp-eg/comp-eg.component';
 import { Sibling1Component } from './sibling-comm/sibling1/sibling1.component';
 import { Sibling2Component } from './sibling-comm/sibling2/sibling2.component';
+import { Comp2Component } from './comp-lifecycle/comp1/comp2/comp2.component';
+import { Comp1Component } from './comp-lifecycle/comp1/comp1.component';
 export const routes: Routes = [
+    {path:'comp1', component: Comp1Component, pathMatch:'full'},
+    {path:'comp2', component: Comp2Component, pathMatch:'full'},
     {path: 'sibling1', component: Sibling1Component, pathMatch: 'full'},
     {path: 'sibling2', component: Sibling2Component, pathMatch: 'full'},
     {path: 'comp-eg', component: CompEgComponent, pathMatch: 'full'},

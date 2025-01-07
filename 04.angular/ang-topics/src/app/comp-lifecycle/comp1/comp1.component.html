@@ -1,0 +1,6 @@
+<p>comp1 works!</p>
+<input type="text" #text2>
+<button (click)="sendMessage(text2.value)">Send Message To Child</button>
+<app-comp2 [msgFromParent]="msgToChild" >
+    <p>Ng-context text</p>
+</app-comp2>

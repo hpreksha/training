@@ -2,10 +2,10 @@
 import { Component } from '@angular/core';
 // import { DirectiveComponent } from './directive.component';
 import { RedElDirective } from '../red-el.directive';
-import { NgIf, NgFor, CommonModule, NgClass } from '@angular/common';
+import { CommonModule, NgClass } from '@angular/common';
 @Component({
   selector: 'app-directive',
-  imports: [RedElDirective, NgIf, NgFor, CommonModule, NgClass],
+  imports: [RedElDirective,CommonModule, NgClass],
   styles: [
     `.special {
       color: red;

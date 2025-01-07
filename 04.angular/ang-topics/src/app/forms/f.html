@@ -1,0 +1,22 @@
+<!-- This html file is not decalred in @Component but still ngIf and others work here. -->
+
+<h2>Template driven forms</h2>
+<form #loginForm="ngForm" (ngSubmit)="userLogin(loginForm.value)">
+    <br>
+    Name: 
+    <input type="text" name="username" ngModel required #username="ngModel">
+    <div *ngIf="username.invalid && username.touched" style="color: red;">
+      Username is required.
+    </div>
+    <br><br>
+  
+    Password: 
+    <input type="password" name="password" ngModel required #password="ngModel">
+    <div *ngIf="password.invalid && password.touched" style="color: red;">
+      Password is required.
+    </div>
+    <br><br>
+  
+    <button [disabled]="loginForm.invalid">Login</button>
+  </form>
+  
