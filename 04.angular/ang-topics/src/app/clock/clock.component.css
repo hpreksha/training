@@ -1,0 +1,17 @@
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ff6347;
+    font-weight: bold;
+    padding: 0.5rem;
+  
+  }
+  
+  p {
+    text-align: center;
+    font-size: 8rem;
+    font-weight: normal;
+    margin-top: 0;
+    padding-top: 4rem;
+  }
+  
