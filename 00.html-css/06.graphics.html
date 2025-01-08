@@ -49,36 +49,7 @@
       </svg>
     </div>
     
-    <video id="eg-video" width="320" height="240" controls>
-      <source src="/html-css/video_eg.mp4" type="video/mp4" />
-    </video>
-    <div class="video-btns">
-      <button onClick="play1()">Play</button>
-      <button onClick="pause1()">Pause</button>
-      <button onClick="mute()">Mute</button>
-      <button onClick="rewind()">Rewind</button>
-      <button onClick="fastForward()">Fast Forward</button>
-    </div>
-    <script>
-      var myVideo = document.getElementById("eg-video");
-
-      function play1() {
-        myVideo.play();
-      }
-      function pause1() {
-        myVideo.pause();
-      }
-      function mute() {
-        myVideo.muted = !myVideo.muted;
-      }
-      function rewind() {
-        myVideo.currentTime -= 2;
-      }
-
-      function fastForward() {
-        myVideo.currentTime += 2;
-      }
-    </script>
+   
 
    
 

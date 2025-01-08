@@ -48,7 +48,7 @@ export class ClockComponent {
   }
 
   @HostListener('window:beforeunload', ['$event'])
-  beforeUnloadHandler(event: BeforeUnloadEvent) {
+  func(event: BeforeUnloadEvent) {
     if(this.interval_id) {
       clearInterval(this.interval_id);
     }

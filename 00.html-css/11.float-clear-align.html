@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float, Clear, and Align Example</title>
+    <style>
+        /* Basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* Container to hold all the content */
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: #f4f4f4;
+            padding: 10px;
+        }
+
+        /* Styling the left floated element (image) */
+        .left-float {
+            float: left;
+            margin-right: 20px;
+            width: 200px;
+        }
+
+        /* Styling the right floated element (image) */
+        .right-float {
+            float: right;
+            margin-left: 20px;
+            width: 200px;
+        }
+
+        /* Clearfix to prevent content overflow */
+        .clear {
+            clear: both;
+        }
+
+        /* Styling the paragraph text */
+        .text {
+            text-align: justify;
+        }
+
+        /* Aligning the heading */
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Float, Clear, and Align Example</h1>
+
+        <!-- Left floated image -->
+        <img src="./ss.jpeg" alt="Left Float" class="left-float">
+
+        <p class="text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id arcu ut sapien varius facilisis.
+            Vivamus pharetra auctor nunc et tincidunt. Aliquam erat volutpat. Donec malesuada orci sit amet ante
+            facilisis, nec eleifend augue vehicula. Integer ut sollicitudin arcu. Nulla vel ipsum at sapien tempus
+            lacinia. Proin tempor leo neque, et dapibus orci viverra non. Pellentesque egestas bibendum purus, eu
+            gravida justo scelerisque vel. Integer non purus enim. Vestibulum aliquet sem ut velit dapibus tempor.
+        </p>
+
+        <!-- Right floated image -->
+        <img src="./ss.jpeg" alt="Right Float" class="right-float">
+
+        <p class="text">
+            Curabitur malesuada dui nec lectus mollis, id tristique orci venenatis. Phasellus id tortor nunc.
+            Quisque fringilla eget libero sed interdum. Proin euismod ante eget purus placerat, ac malesuada enim
+            aliquam. Integer et velit ut turpis tincidunt ullamcorper. Etiam nec ante ut eros mollis dictum et id
+            ligula. Ut consequat dui eget eros lacinia, ac fermentum sapien ultricies.
+        </p>
+
+        <!-- Clearfix to stop float affecting layout -->
+        <div class="clear"></div>
+
+        <p class="text">
+            Donec id gravida dui. Suspendisse eget sem in nisl facilisis faucibus vel eget nulla. Nunc eget dui
+            augue. Ut volutpat mollis libero. Etiam tincidunt, nulla nec cursus convallis, orci magna gravida leo,
+            id malesuada risus leo nec felis. Curabitur aliquet mi ac tempus aliquet. Aliquam erat volutpat.
+        </p>
+    </div>
+
+</body>
+</html>

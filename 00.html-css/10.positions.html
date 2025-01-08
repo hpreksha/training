@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positioning Elements</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        div {
+            border-style: solid;
+            border-color: orange;
+            width: 6rem;
+            height: 4rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 1rem 0;
+        }
+
+        #static {
+            position: static;
+            background-color: lightyellow;
+        }
+
+        #relative {
+            position: relative;
+            background-color: lightgreen;
+        }
+
+        #fixed {
+            position: fixed;
+            top: 10%;
+            left: 10%;
+            background-color: lightblue;
+        }
+
+        #absolute {
+            position: absolute;
+            top: 40%;
+            left: 10%;
+            background-color: lightcoral;
+        }
+
+        #sticky {
+            position: sticky;
+            top: 0;
+            background-color: lightpink;
+        }
+    </style>
+</head>
+<body>
+    <div id="static">Static</div>
+    <div id="relative">Relative</div>
+    <div id="absolute">Absolute</div>
+    <div id="fixed">Fixed</div>
+    <div id="sticky">Sticky</div>
+</body>
+</html>

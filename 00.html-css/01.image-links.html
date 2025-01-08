@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-image: url("./bg.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 98vh;
+      }
+      a:link,
+      a:visited {
+        color: blue;
+      }
+
+      a:hover,
+      a:active {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Links and images</h1>
+    <hr />
+    <h3>Links</h3>
+    <p>Absolute URLs</p>
+    <a href="https://www.w3schools.com/" target="_blank">Visit W3Schools!</a>
+    <!-- _self - Default. Opens the document in the same window/tab as it was clicked
+_blank - Opens the document in a new window or tab
+_parent - Opens the document in the parent frame
+_top - Opens the document in the full body of the window -->
+    <br />
+    <p>Relative URLs</p>
+    <a href="./00.basic.html">Basic File</a>
+
+    <p>Image as a link.</p>
+    <a href="./00.basic.html">
+      <img
+        src="ss.jpeg"
+        alt="HTML tutorial"
+        style="width: 42px; height: 42px"
+      />
+    </a>
+    <p>Mail as a link.</p>
+    <a href="mailto:preksha.hirani@marutitech.com">Send email</a>
+    <p>Button as a link.</p>
+    <button onclick="document.location='./00.basic.html'">Button</button>
+    <p>Link bookmark</p>
+    <a href="#footer">Footer</a>
+    <p id="footer"></p>
+    <!-- ------------------------------------------------ -->
+    <hr />
+    <h3>Images</h3>
+    <img src="ss.jpeg" alt="Sky scrapper image" />
+    <p>Workmap</p>
+    <img src="ss.jpeg" alt="Workplace" usemap="#workmap" />
+
+    <map name="workmap">
+      <area shape="rect" coords="34,44,270,350" alt="Computer" href="#" />
+      <area shape="rect" coords="290,172,333,250" alt="Phone" href="#" />
+      <area shape="circle" coords="337,300,44" alt="Coffee" href="#" />
+    </map>
+
+    <p>Picture element</p>
+    <!-- <picture>
+        <source media="(min-width: 650px)" srcset="ss.jpeg">
+        <source media="(min-width: 465px)" srcset="ss.jpeg">
+        <img src="img_girl.jpg">
+      </picture> -->
+
+    <p>Object element</p>
+    <object data="ss.jpeg"></object>
+    <p>Youtube video</p>
+    <iframe
+      width="420"
+      height="315"
+      src="https://www.youtube.com/watch?v=ruZHJOmLFpo"
+    >
+    </iframe>
+  </body>
+</html>
