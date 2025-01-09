@@ -11,5 +11,8 @@ import { FormsModule } from '@angular/forms';
 export class BindingComponent {
   title = 'binding-eg';
   name="John";
-  disabled=true;
+  disabled=false;
+  toggleDisable() {
+    this.disabled = !this.disabled;
+  }
 }

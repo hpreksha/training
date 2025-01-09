@@ -6,8 +6,8 @@ import { Comp2Component } from './comp2/comp2.component';
   templateUrl: './comp1.component.html',
 })
 export class Comp1Component {
-  @Input() msgToChild: string = '';
-  sendMessage(value:string) {
+  msgToChild: string = '';
+  setMessage(value:string) {
     this.msgToChild = value;
   }
   // ------------------------------------------

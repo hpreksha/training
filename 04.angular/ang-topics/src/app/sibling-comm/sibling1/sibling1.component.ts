@@ -6,13 +6,13 @@ import { FormsModule } from '@angular/forms';
   selector: 'app-sibling1',
   imports: [FormsModule],
   templateUrl: './sibling1.component.html',
-  styleUrl: './sibling1.component.css'
 })
 export class Sibling1Component {
   msg: string='';
   msg1:string='';
   constructor(private siblingService: SiblingServiceService) {}
   sendMsg() {
+    console.log("Sending..");
     setTimeout(() => {
     this.siblingService.setmsg(this.msg);
     this.msg1 = "Message sent to sibling2.";

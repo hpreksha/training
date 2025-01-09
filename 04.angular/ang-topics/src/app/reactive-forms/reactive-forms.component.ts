@@ -20,15 +20,12 @@ export class ReactiveFormsComponent {
     password: new FormControl('',[Validators.minLength(4)]),
   });
   loginUser() {
-    this.onclick();
+    alert("Form Submitted");
   }
   get username() {
     return this.loginForm.get('username');
   }
   get password() {
     return this.loginForm.get('password');
-  }
-  onclick() {
-    alert("Form Submitted");
   }
 }

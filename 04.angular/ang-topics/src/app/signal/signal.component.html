@@ -1,9 +1,11 @@
-<h1>{{title}}</h1>
+<h1>Signals</h1>
+<hr>
 <p>Count: {{count()}}</p> <!-- Display the count value -->
 <p>Double Count: {{doubleCount()}}</p> <!-- Display the computed double count value -->
 <button (click)="inc()">Increment</button>
 
 <br><br>
+<h3>Change value of Object</h3>
 <input type="text" #box>
 <button (click)="changeId(box.value)">Click here to change id.</button>
 <br>

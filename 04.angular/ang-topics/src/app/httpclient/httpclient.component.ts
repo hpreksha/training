@@ -24,7 +24,7 @@ export class HttpclientComponent {
       this.userList = data;
     });
     console.log('User List:', this.userList);
-    // subscribe to capture data
+    // subscribe: to capture data
   }
   addUser() {
     const newUser = this.userForm.value;

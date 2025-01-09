@@ -34,7 +34,7 @@ export class ClockComponent {
     }, 1000);
   }
 
-  ngOnDestroy() {
+  exitComponent() {
     if (this.intervalId) {
       clearInterval(this.intervalId);
     }
@@ -43,18 +43,16 @@ export class ClockComponent {
       localStorage.setItem('setTime', this.currentTime()!.toString());
     }
     console.log('Exit at: ', this.currentTime());
+  }
+
+  ngOnDestroy() {
+    this.exitComponent();
     console.log('Destroy method.');
   }
 
   @HostListener('window:beforeunload', ['$event'])
   func(event: BeforeUnloadEvent) {
-    if (this.intervalId) {
-      clearInterval(this.intervalId);
-    }
-
-    if (this.currentTime() instanceof Date) {
-      localStorage.setItem('setTime', this.currentTime()!.toString());
-    }
+    this.exitComponent();
     console.log('Before unload method.');
   }
 }

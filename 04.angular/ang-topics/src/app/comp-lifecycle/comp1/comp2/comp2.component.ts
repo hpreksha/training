@@ -23,18 +23,18 @@ export class Comp2Component {
     console.log("ngDoCheck called.")
   }
   ngAfterContentInit() {
-    console.log('CompEgComponent ngAfterContentInit called');
+    console.log('ngAfterContentInit called');
   }
 
   ngAfterContentChecked() {
-    console.log('CompEgComponent ngAfterContentChecked called');
+    console.log('ngAfterContentChecked called');
   }
 
   ngAfterViewInit() {
-    console.log('CompEgComponent ngAfterViewInit called');
+    console.log('ngAfterViewInit called');
   }
 
   ngAfterViewChecked() {
-    console.log('CompEgComponent ngAfterViewChecked called');
+    console.log('ngAfterViewChecked called');
   }
 }

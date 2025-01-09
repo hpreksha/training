@@ -5,7 +5,6 @@ import { SiblingServiceService } from '../sibling-service.service';
   selector: 'app-sibling2',
   imports: [],
   templateUrl: './sibling2.component.html',
-  styleUrl: './sibling2.component.css'
 })
 export class Sibling2Component implements OnInit{
   rcdMsg: string = '';

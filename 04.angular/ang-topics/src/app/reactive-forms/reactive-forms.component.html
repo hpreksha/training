@@ -1,12 +1,13 @@
-<h2>Reactive Forms</h2>
+<h1>Reactive Forms</h1>
+<hr>
 <form [formGroup]="loginForm" (ngSubmit)="loginUser()">
   <br />
   Name: <input type="text" placeholder="Enter email"  name="username" formControlName="username" />
   <br />
   <span *ngIf="username && username.invalid && username.touched">Not valid</span><br />
-  Password: <input type="password" placeholder="Enter password" name="password" formControlName="password" />
+  Password: <input type="password" placeholder="Enter password(min-legth: 4)" name="password" formControlName="password" />
   <br /><br />
-  <button (click)="onclick()" [disabled]="loginForm.invalid">Login</button>
+  <button (click)="loginUser()" [disabled]="loginForm.invalid">Login</button>
 </form>
 username: {{ username?.value}}
 <br>

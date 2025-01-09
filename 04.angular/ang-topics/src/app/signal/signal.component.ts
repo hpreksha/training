@@ -7,7 +7,6 @@ import { Component, signal, computed, effect, untracked } from '@angular/core';
 })
 export class SignalComponent {
 
-  title = 'signal-eg';
   count = signal(0);
   obj_eg = {id:1, name:"preksha"};
   obj_eg_signal = signal(this.obj_eg);

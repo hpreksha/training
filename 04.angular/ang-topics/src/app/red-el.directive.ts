@@ -9,5 +9,4 @@ export class RedElDirective {
     el.nativeElement.style.color = 'red';
     el.nativeElement.innerText = 'This text is now red';
   }
-  // isVisible=false;
 }

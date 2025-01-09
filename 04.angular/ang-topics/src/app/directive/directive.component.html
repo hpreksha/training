@@ -4,9 +4,8 @@
 2. Structural Directive
 3. Attribute Directive -->
 
-<h1>{{ title }}</h1>
-<h2>Custom directive</h2>
-<h3 appRedEl>{{ title }}</h3>
+<h1>Directive</h1>
+<hr>
 <h2>*ngIf example</h2>
 <div *ngIf="isVisible">This div is conditionally visible.</div>
 <!-- Will be displayed if the value is true. -->
@@ -20,15 +19,19 @@
 </ul>
 <h2>*ngSwitch example</h2>
 <div [ngSwitch]="value">
-  <div *ngSwitchCase="'A'">Value is A</div>
+  <!-- value='A' -->
+  <div *ngSwitchCase="'2'">Value is A</div>
   <div *ngSwitchCase="'B'">Value is B</div>
   <div *ngSwitchDefault>Value is unknown</div>
 </div>
 
 
-<h3 (click)="onClick()" (mouseover)="onMouseOver()">Hover or click me!</h3>
-<p>{{text}}</p>
-<h2>ngClass example</h2>
-<div appRedEl></div>
+<!-- <h3 (click)="onClick()" (mouseover)="onMouseOver()">Hover or click me!</h3>
+<p>{{text}}</p> -->
 
+<h2>External Directive</h2>
+<div appRedEl><br>External Directive</div>
+<br>
+
+<h2>ngClass example</h2>
 <div [ngClass]="isVisible ? 'special' : ''">This div is special</div>

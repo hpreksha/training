@@ -8,6 +8,7 @@ import { NgIf } from '@angular/common';
   templateUrl: './forms.component.html',
 })
 export class FormsComponent {
+  username:any;
   userLogin(item:any) {
     console.log(item);
   }

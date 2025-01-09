@@ -24,7 +24,7 @@ export class DirectiveComponent {
     { name: 'Item 3', visible: true },
     { name: 'Item 4', visible: true },
   ];
-value = 'A';
+value = "2";
 isActive=false;
 toggleActive() {
   this.isActive = !this.isActive;
