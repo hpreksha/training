@@ -11,25 +11,21 @@ export class SignalComponent {
   count = signal(0);
   obj_eg = {id:1, name:"preksha"};
   obj_eg_signal = signal(this.obj_eg);
-  // Method to increment the count
   inc() {
     this.count.set(this.count() + 1);
   }
 
-  // Computed value for double the count
   doubleCount = computed(() => {this.count() * 2;
   });
 
-  changeId() {
-    this.obj_eg["id"] = 2;
+  changeId(x:any) {
+    this.obj_eg["id"] = x;
   }
 
   constructor() {
-    effect(() => {
-      // console.log(`The current count is: ${this.count()}`);
-      untracked(() => {
-        console.log(`The current color is: ${this.count()}`);
-      });
-    });
+    effect(()=> {
+      console.log('count changed', this.count());
+      // console.log('count changed', untracked(() => this.count()));
+    })
   }
 }

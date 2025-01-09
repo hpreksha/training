@@ -1,13 +1,10 @@
-<!-- <p>{{title}}</p>
-<p>Count: {{count()}}</p>
-<button (click)="inc()">Increment</button>
-<button (click)="doubleCount()">Double</button> -->
-
-
-<p>{{title}}</p>
+<h1>{{title}}</h1>
 <p>Count: {{count()}}</p> <!-- Display the count value -->
 <p>Double Count: {{doubleCount()}}</p> <!-- Display the computed double count value -->
 <button (click)="inc()">Increment</button>
 
-Object: {{obj_eg_signal().id}} , {{obj_eg_signal().name}} 
-<button (click)="changeId()">Click here to change id.</button>
+<br><br>
+<input type="text" #box>
+<button (click)="changeId(box.value)">Click here to change id.</button>
+<br>
+Object: {{obj_eg_signal().id}} , Name: {{obj_eg_signal().name}}

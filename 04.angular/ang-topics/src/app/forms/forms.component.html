@@ -7,7 +7,6 @@
       Username is required.
     </div>
     <br><br>
-  
     Password: 
     <input type="password" name="password" ngModel required #password="ngModel">
     <div *ngIf="password.invalid && password.touched" style="color: red;">
@@ -16,5 +15,7 @@
     <br><br>
   
     <button [disabled]="loginForm.invalid">Login</button>
+    <p>Username: {{username.value}}</p>
+    <p>Password: {{password.value}}</p>
   </form>
   

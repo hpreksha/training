@@ -15,6 +15,7 @@ import { CommonModule, NgClass } from '@angular/common';
 })
 export class DirectiveComponent {
   title = 'directive-eg';
+  text='';
   isVisible = true;
   item = [1, 2, 3, 4];
   items = [
@@ -29,9 +30,9 @@ toggleActive() {
   this.isActive = !this.isActive;
 }
 onClick() {
-  console.log("q");
+  this.text = 'You clicked the button!';
 }
 onMouseOver( ) {
-  console.log("qq")
+  this.text = 'You hovered over the button!';
 }
 }
