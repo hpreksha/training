@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, signal } from '@angular/core';
 
 @Component({
   selector: 'app-clock',
@@ -6,9 +6,9 @@ import { Component, HostListener } from '@angular/core';
   styleUrls: ['./clock.component.css'],
 })
 export class ClockComponent {
-  currentTime: Date | null = null;
-  intervalId: ReturnType<typeof setInterval>|null|undefined;
-  displayTime: string = '00:00:00';
+  currentTime = signal<Date | null>(null);
+  intervalId: ReturnType<typeof setInterval>|null = null;
+  displayTime: string='00:00:00';
 
   ngOnInit() {
     console.log('ngOnInit method.');
@@ -19,17 +19,17 @@ export class ClockComponent {
     const storedTime = localStorage.getItem('setTime');
 
     if(storedTime) {
-      this.currentTime = new Date(storedTime);
+      this.currentTime.set(new Date(storedTime));
     }
     else {
-      this.currentTime = new Date();
-      localStorage.setItem('setTime', this.currentTime.toString());
+      this.currentTime.set(new Date());
+      localStorage.setItem('setTime', this.currentTime()!.toString());
     }
-    console.log('Start at: ', this.currentTime.toLocaleTimeString());
+    console.log('Start at: ', this.currentTime());
     this.intervalId = setInterval(() => {
-      if (this.currentTime instanceof Date) {
-        this.currentTime = new Date(this.currentTime.getTime() + 1000);
-        this.displayTime = this.currentTime.toLocaleTimeString();
+      if (this.currentTime() instanceof Date) {
+        this.currentTime.set(new Date(this.currentTime()!.getTime() + 1000));
+        this.displayTime = this.currentTime()!.toLocaleTimeString();
       }
     }, 1000);
   }
@@ -39,10 +39,10 @@ export class ClockComponent {
       clearInterval(this.intervalId);
     }
 
-    if (this.currentTime instanceof Date) {
-      localStorage.setItem('setTime', this.currentTime.toString());
+    if (this.currentTime() instanceof Date) {
+      localStorage.setItem('setTime', this.currentTime()!.toString());
     }
-    console.log('Exit at: ', this.currentTime);
+    console.log('Exit at: ', this.currentTime());
     console.log('Destroy method.');
   }
 
@@ -52,8 +52,8 @@ export class ClockComponent {
       clearInterval(this.intervalId);
     }
 
-    if (this.currentTime instanceof Date) {
-      localStorage.setItem('setTime', this.currentTime.toString());
+    if (this.currentTime() instanceof Date) {
+      localStorage.setItem('setTime', this.currentTime()!.toString());
     }
     console.log('Before unload method.');
   }
