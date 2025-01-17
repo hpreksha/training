@@ -7,6 +7,11 @@ export class RedElDirective {
 
   constructor(el:ElementRef) { 
     el.nativeElement.style.color = 'red';
-    el.nativeElement.innerText = 'This text is now red';
+    const div2 = el.nativeElement;
+    const div1 = document.querySelector('div1') as HTMLElement;
+    if (div1) {
+      div1.style.color = 'red';
+    }
+    
   }
 }
