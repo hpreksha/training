@@ -7,6 +7,11 @@ async function myFunc() {
     console.log(res);
     console.log('4');
 }
+// 2
+// 1
+// 3
+// One!
+// 4
 
 function myFunc1() {
     console.log('1');
@@ -15,9 +20,15 @@ function myFunc1() {
         
     });
     console.log('4');
-}
+// }
+// 2
+// 1
+// 4
+// 3
+// One!
 
 
 console.log('2');
 myFunc();
+// myFunc1();
 console.log('3');
