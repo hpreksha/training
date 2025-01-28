@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="heading">DOM Manipulation in JavaScript</h1>
+    <p class="para" for="q">This is the first paragraph.</p>
+    <p class="para" for="q">This is the second paragraph.</p>
+    <p class="para">This is the third paragraph.</p>
+    <p id="remove-me">This paragraph will be removed.</p>
+    <input type="text" id="myInput" />
+    <button id="myButton">Click me!</button>
+    <script>
+      // Using `getElementById` to select an element by its ID
+      const heading = document.getElementById("heading");
+      console.log(heading);
+
+      // Using `getElementsByClassName` to select elements by class name
+      // This returns an HTMLCollection
+      // HTMLCollection is a collection of elements, which can be accessed by index
+      //Diff between HTMLCollection and NodeList is that HTMLCollection is live and NodeList is static
+      //Live means that if the DOM changes, the collection will update automatically
+      //Static means that the collection will not update if the DOM changes
+      const paragraphs = document.getElementsByClassName("para");
+      console.log(paragraphs);
+
+      // Using `querySelector` to select the first matching element
+      const firstPara = document.querySelector("p");
+      console.log(firstPara);
+
+      // Using `querySelectorAll` to select all matching elements
+      // This returns a NodeList
+    //   NodeList is a collection of nodes, which can be accessed by index
+      const allParas = document.querySelectorAll(".para");
+      console.log(allParas);
+      const forParas = document.querySelectorAll("[for='q']");
+        console.log(forParas);
+
+      // Changing text content of an element
+      heading.textContent = "Welcome to DOM Manipulation!";
+
+      // Changing the HTML content of an element
+      heading.innerHTML = "<strong>DOM Manipulation in JavaScript</strong>";
+
+      // Changing the style of an element
+      heading.style.color = "blue";
+      heading.style.fontSize = "30px";
+
+      // Creating a new element
+      const newPara = document.createElement("p");
+      newPara.textContent = "This is a new paragraph added using JavaScript!";
+      document.body.appendChild(newPara);
+
+      // Removing an element
+      const elementToRemove = document.getElementById("remove-me");
+      elementToRemove.remove();
+
+
+      // Adding an event listener to a button
+const button = document.getElementById("myButton");
+
+button.addEventListener("click", function() {
+    alert("Button was clicked!");
+});
+
+// Adding an event listener using an anonymous function
+const inputField = document.querySelector("#myInput");
+inputField.addEventListener("input", function(event) {
+    console.log("Input value:", event.target.value);
+});
+    </script>
+  </body>
+</html>

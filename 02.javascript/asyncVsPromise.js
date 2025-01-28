@@ -20,7 +20,7 @@ function myFunc1() {
         
     });
     console.log('4');
-// }
+}
 // 2
 // 1
 // 4

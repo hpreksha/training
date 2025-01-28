@@ -12,6 +12,5 @@ export class RedElDirective {
     if (div1) {
       div1.style.color = 'red';
     }
-    
   }
 }
