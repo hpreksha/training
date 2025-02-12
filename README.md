@@ -1,4 +1,3 @@
-=
 # Internship
 
 This repository contains the projects and assignments completed during the internship program. The structure and purpose of each folder are detailed below.
