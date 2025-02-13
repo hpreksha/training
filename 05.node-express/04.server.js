@@ -1,57 +1,44 @@
-import { createServer } from 'http';
+import http from 'http';
+import fs from 'fs';
+import url from 'url';
 
-const PORT = process.env.PORT || 3000;
 
-const obj = [
-    { id: 1, name: 'John Doe', age: 32 },
-    { id: 2, name: 'Jane Doe', age: 28 }
-];
+const data = fs.readFileSync('./data.json', 'utf-8');
+const studentDataObj = JSON.parse(data);
 
-const createObj = (req, res) => {
-    let body = '';
-    req.on('data', (chunk) => {
-        body += chunk.toString();
-        console.log(body);
-    });
-    req.on('end', () => {
-        const newObj = JSON.parse(body);
-        console.log('Parsed new object:', newObj);
-        obj.push(newObj);
-        res.statusCode = 201;
-        res.setHeader('Content-Type', 'application/json');
-        res.write(JSON.stringify(newObj));
-        console.log(obj);
-        res.end();
-    });
-};
-
-const server = createServer((req, res) => {
-    console.log(`Request received: ${req.method} ${req.url}`);  // Log method and URL
-    
-    res.setHeader('Content-Type', 'application/json'); // Set default content type
-    if (req.url === '/api/obj' && req.method === 'GET') {
-        res.statusCode = 200;
-        res.write(JSON.stringify(obj));res.end();
-    }
-    else if (req.url.match(/\/api\/obj\/([0-9]+)/) && req.method === 'GET') {
-        const id = req.url.split('/')[3];
-        const o = obj.find((o) => o.id === parseInt(id));
-        res.statusCode = o ? 200 : 404;
-        res.write(o ? JSON.stringify(o) : JSON.stringify({ message: 'Object not found' }));
+const PORT = 3000;
+const server = http.createServer((req, res) => {
+    const {query, pathname} = url.parse(req.url, true);
+    if(pathname === '/' || pathname === '/overview') {
+        res.end("This is Home page.");
+    } else if(pathname === '/api') {
+        res.writeHead(200, {
+            'Content-type':'application/json'
+        })
+        res.end(data);
+    } else if(pathname === '/student') {
+        const student = studentDataObj[query.id];
+        res.writeHead(200, {'Content-Type': 'text/html'});
+        res.write(`
+            <html>
+                <head>
+                    <title>Student Information</title>
+                </head>
+                <body>
+                    <h1>Student Information</h1>
+                    <p><strong>ID:</strong> ${student.id}</p>
+                    <p><strong>Name:</strong> ${student.name}</p>
+                    <p><strong>Age:</strong> ${student.age}</p>
+                    <p><strong>Email:</strong> ${student.email}</p>
+                    <p><strong>Courses:</strong> ${student.courses.join(', ')}</p>
+                </body>
+            </html>
+            `);
+        // console.log(student);
         res.end();
     }
-    else if (req.url === '/api/objs' && req.method === 'POST') {
-        console.log('Handling POST request for /api/objs');  // Log the POST request handling
-        createObj(req, res);  // Handle POST request
-    }
-    else {
-        res.statusCode = 404;
-        res.write(JSON.stringify({ message: 'Not Found' }));
-        res.end();
-    }
-    
 });
 
 server.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
-});
+    console.log(`Server is runnig on port ${PORT}`);
+})

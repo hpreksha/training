@@ -1,0 +1,73 @@
+[
+    {
+      "id": "S1001",
+      "first_name": "Alice",
+      "last_name": "Johnson",
+      "age": 20,
+      "email": "alice.johnson@example.com",
+      "courses": ["Math 101", "Physics 202"],
+      "address": {
+        "street": "123 Maple St",
+        "city": "Springfield",
+        "state": "IL",
+        "zip_code": "62701"
+      }
+    },
+    {
+      "id": "S1002",
+      "first_name": "Bob",
+      "last_name": "Smith",
+      "age": 22,
+      "email": "bob.smith@example.com",
+      "courses": ["History 101", "Art 202"],
+      "address": {
+        "street": "456 Oak St",
+        "city": "Springfield",
+        "state": "IL",
+        "zip_code": "62702"
+      }
+    },
+    {
+      "id": "S1003",
+      "first_name": "Charlie",
+      "last_name": "Davis",
+      "age": 21,
+      "email": "charlie.davis@example.com",
+      "courses": ["Computer Science 101", "Math 202"],
+      "address": {
+        "street": "789 Pine St",
+        "city": "Champaign",
+        "state": "IL",
+        "zip_code": "61820"
+      }
+    },
+    {
+      "id": "S1004",
+      "first_name": "David",
+      "last_name": "Martinez",
+      "age": 23,
+      "email": "david.martinez@example.com",
+      "courses": ["Biology 101", "Chemistry 202"],
+      "address": {
+        "street": "101 Birch St",
+        "city": "Urbana",
+        "state": "IL",
+        "zip_code": "61801"
+      }
+    },
+    {
+      "id": "S1005",
+      "first_name": "Eve",
+      "last_name": "Wilson",
+      "age": 19,
+      "email": "eve.wilson@example.com",
+      "courses": ["Literature 101", "Philosophy 202"],
+      "address": {
+        "street": "202 Cedar St",
+        "city": "Peoria",
+        "state": "IL",
+        "zip_code": "61602"
+      }
+    }
+  ]
+  
