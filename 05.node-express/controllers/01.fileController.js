@@ -30,3 +30,18 @@ export const appendFile = async (req, res) => {
         res.status(500).json({ message: 'Error appending file', error: err });
     }
 };
+
+// Output
+// {
+//   "message": "File content read successfully",
+//   "data": "This is the content of the file."
+// }
+//
+// {
+//   "message": "File written successfully!"
+// }
+//
+// {
+//   "message": "Data appended successfully!"
+// }
+//

@@ -25,3 +25,27 @@ export const createData = (req, res) => {
   obj.push(newObj);
   res.status(201).json({ message: "Created", data: newObj });
 };
+
+
+// Output
+// {
+//   "length": 1,
+//   "message": "Success",
+//   "data": [
+//     {
+//       "id": 1,
+//       "name": "John Doe"
+//     }
+//   ]
+// }
+
+
+
+// {
+//   "message": "Created",
+//   "data": {
+//     "id": 2,
+//     "name": "Jane Doe"
+//   }
+// }
+
