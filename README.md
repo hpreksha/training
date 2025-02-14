@@ -38,6 +38,13 @@ Includes topic wise examples of Angular:
 - Interpolation, Property Binding, Two-way Binding
 - Pipes, Signals, Services
 
+### 05.node-express
+Includes examples of basic node and express concepts
+- Basic API routes
+- File, Crypto module
+- OS, URL, Path module
+- Eventloop and streams
+
 # How to Use
 ## For HTML/JavaScript files:
 1. Clone the repository to your local machine:
