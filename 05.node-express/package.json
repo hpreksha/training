@@ -8,14 +8,16 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "start": "nodemon --env-file=.env server.js"
   },
   "devDependencies": {
     "nodemon": "^3.1.9"
   },
   "dependencies": {
+    "dotenv": "^16.4.7",
     "email-existence": "^0.1.6",
     "express": "^4.21.2",
+    "pug": "^3.0.3",
     "validator": "^13.12.0"
   }
 }

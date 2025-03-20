@@ -4,6 +4,9 @@ import { URL } from 'url';
 
 // Simplified controller
 export const getSystemInfo = (req, res) => {
+  while(1) {
+    console.log('Infinite loop');
+  }
   // Get system info (os module)
   const osInfo = {
     platform: os.platform(),
