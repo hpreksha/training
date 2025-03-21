@@ -1,23 +1,13 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-
-function Student() {
-  return (
-    <>
-    <h1>Hello</h1>
-    </>
-  );
-} 
+import Navbar from './components/Navbar'
+import States from './components/States'
 
 function App() {
 
   return (
     <>
-      <Student />
-      <Student />
-
+      <Navbar />
+      <States />
     </>
   )
 }
