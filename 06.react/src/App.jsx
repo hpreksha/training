@@ -6,6 +6,7 @@ import States from './components/States.jsx';
 import Lists from './components/Lists.jsx';
 import DomExample from './components/DomExample.jsx';
 import ComponentRendering from './components/ComponentRendering.jsx';
+import Props from './components/Props.jsx';
 function App() {
 
   return (
@@ -21,6 +22,7 @@ function App() {
             <Route path='/lists' element={<Lists />} />
             <Route path='/dom' element={<DomExample />} />
             <Route path='/render' element={<ComponentRendering />} />
+            <Route path='/props' element={<Props />} />
           </Routes>
         </div>
       </div>
