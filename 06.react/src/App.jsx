@@ -1,14 +1,20 @@
 import './App.css'
 import Navbar from './components/Navbar'
-import States from './components/States'
-
+import { BrowserRouter } from 'react-router-dom'
+import RouteConfig from '../Routes.jsx'
 function App() {
 
   return (
-    <>
+    <BrowserRouter>
+    <div className='container'>
+      <div className='navbar'>
       <Navbar />
-      <States />
-    </>
+      </div>
+      <div className='content'>
+      <RouteConfig />
+      </div>
+    </div>
+    </BrowserRouter>
   )
 }
 
