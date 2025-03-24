@@ -6,6 +6,8 @@ export default function Navbar() {
                     <li><a href="/">Home</a></li>
                     <li><a href="/States">States</a></li>
                     <li><a href="/lists">Lists</a></li>
+                    <li><a href="/dom">DOM</a></li>
+                    <li><a href="/render">Rendering</a></li>
                  </ul>
             </nav>
         </>
