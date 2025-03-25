@@ -8,6 +8,7 @@ export default function Navbar() {
                     <li><a href="/lists">Lists</a></li>
                     <li><a href="/render">Rendering</a></li>
                     <li><a href="/props">Props</a></li>
+                    <li><a href="/use-effect">useEffect</a></li>
                 </ul>
             </nav>
         </>
