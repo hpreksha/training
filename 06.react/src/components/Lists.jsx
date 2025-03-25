@@ -1,10 +1,11 @@
 import React from 'react'
 import { useState } from 'react'
-const tempList = [1, 2, 3, 4];
+
 const Lists = () => {
+
+  const tempList = [1, 2, 3, 4];
   const [value, setValue] = useState('');
   const [list, setList] = useState(tempList);
-  const [visible, setVisible] = useState(false);
   const handleChange = event => {
     setValue(event.target.value);
   };
@@ -14,12 +15,10 @@ const Lists = () => {
       setList(prevList => [...prevList, parseInt(value)]);
     }
     setValue('');
-    console.log(list);
     event.preventDefault();
   };
   const reverseList = () => {
-    setVisible(!visible);
-    setList(list.reverse());
+    setList([...list].reverse());
   }
 
   return (
@@ -51,4 +50,5 @@ export default Lists
 
 // If we will not use key the checkbox will not be updated according to listitem when reversed.
 // So, for React to uniquely identify list elements we need to use keys.
-// When children have keys, React uses the key to match children in the original tree with children in the subsequent tree
+// When children have keys, React uses the key to match children in the original tree with children in the subsequent tree.
+// Why shouldn't use index as keys : This can cause issues when React tries to update the list, as it may not be able to identify the correct element to update or delete.

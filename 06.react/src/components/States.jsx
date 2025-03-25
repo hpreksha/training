@@ -1,81 +1,31 @@
+import { useState } from "react";
+
 export default function States() {
-    let count = 0;
-    const incrementCount = () => {
-        count++;
-        console.log("count: ",count);
-    };
-    return (
-        <>  
-            <p>Tring to manipulating normal variable</p>
-            <button onClick={incrementCount}>Increment Count</button>
-            <p>Count:{count}</p>
-        </>
-    )
-}
-
-
-
-/*
-import { useState } from 'react';
-
-export default function Form() {
   const [person, setPerson] = useState({
-    firstName: 'Barbara',
-    lastName: 'Hepworth',
-    email: 'bhepworth@sculpture.com'
+    firstName: 'Preksha',
+    lastName: 'Hirani',
   });
-
-  function handleFirstNameChange(e) {
+  let count = 0;
+  const incrementCount = () => {
+    count++;
+    console.log("count: ", count);
+  };
+  function handleFirstNameChange(event) {
     setPerson({
       ...person,
-      firstName: e.target.value
+      firstName: event.target.value
     });
   }
-
-  function handleLastNameChange(e) {
-    setPerson({
-      ...person,
-      lastName: e.target.value
-    });
-  }
-
-  function handleEmailChange(e) {
-    setPerson({
-      ...person,
-      email: e.target.value
-    });
-  }
-
   return (
     <>
-      <label>
-        First name:
-        <input
-          value={person.firstName}
-          onChange={handleFirstNameChange}
-        />
-      </label>
-      <label>
-        Last name:
-        <input
-          value={person.lastName}
-          onChange={handleLastNameChange}
-        />
-      </label>
-      <label>
-        Email:
-        <input
-          value={person.email}
-          onChange={handleEmailChange}
-        />
-      </label>
-      <p>
-        {person.firstName}{' '}
-        {person.lastName}{' '}
-        ({person.email})
-      </p>
-    </>
-  );
-}
+      <p>Tring to manipulating normal variable</p>
+      <button onClick={incrementCount}>Increment Count</button>
+      <p>Count:{count}</p>
+      <br />
+      <input value={person.firstName} onChange={handleFirstNameChange} />
+      <p>firstName: {person.firstName}</p>
+      <p>lastName: {person.lastName}</p>
 
-*/
+    </>
+  )
+}
