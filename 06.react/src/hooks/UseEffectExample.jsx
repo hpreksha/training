@@ -6,33 +6,28 @@ const UseEffectExample = () => {
   const [timer, setTimer] = useState(0);
 
   useEffect(() => {
-    const interval = setInterval(() => setTimer((prevTimer) => prevTimer + 1), 1000); // Fixed timer increment
+    const interval = setInterval(() => setTimer((prevTimer) => prevTimer + 1), 1000);
 
-    return () => clearInterval(interval); // Cleanup interval on unmount
-  }, []); // Run only once on mount
-
+    return () => clearInterval(interval);
+  }, []);
   useEffect(() => {
     (async function fetchData() {
       const response = await fetch("https://jsonplaceholder.typicode.com/posts");
       const data = await response.json();
       console.log("Fetched Data:", data);
-    })(); // IIFE for immediate execution
-  }, []); // Run only once on mount
-
-  useEffect(() => {
-    console.log("Render only once");
-  }, [timer]); // Correct usage for running only once
+    })();
+  }, []);
 
   useEffect(() => {
     console.log("Render on every change");
-  }); // Correct usage for running on every render
+  });
 
   useEffect(() => {
     console.log("Render on state count");
     return () => {
       console.log("Clean up");
     };
-  }, [count]); // Runs when `count` changes
+  }, [count]);
 
   return (
     <>
@@ -50,8 +45,9 @@ export default UseEffectExample;
 
 /*
 useEffect “delays” a piece of code from running until that render is reflected on the screen.
-
-, : render on every change
-, [] : render only once
-
+useEffect runs after every render except the first render.
+useEffect runs after the first render if the dependency array is empty.
+useEffect runs after the first render and every render when there is no dependency array.
+useEffect runs after the first render and when the dependency array changes.
+useEffect runs before the component is removed from the screen
 */

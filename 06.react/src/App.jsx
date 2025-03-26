@@ -7,6 +7,7 @@ import Lists from './components/Lists.jsx';
 import ComponentRendering from './components/ComponentRendering.jsx';
 import Props from './components/Props.jsx';
 import UseEffectExample from './hooks/UseEffectExample.jsx';
+import ComponentLifecycle from './components/ComponentLifecycle.jsx';
 function App() {
 
   return (
@@ -23,6 +24,7 @@ function App() {
             <Route path='/render' element={<ComponentRendering />} />
             <Route path='/props' element={<Props />} />
             <Route path='/use-effect' element={<UseEffectExample />} />
+            <Route path='/lifecycle' element={<ComponentLifecycle />} />
           </Routes>
         </div>
       </div>
