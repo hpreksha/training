@@ -1,22 +1,27 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useLayoutEffect } from "react";
 
 const UseEffectExample = () => {
   const [count, setCount] = useState(0);
   const [visible, setVisible] = useState(false);
   const [timer, setTimer] = useState(0);
 
-  useEffect(() => {
-    const interval = setInterval(() => setTimer((prevTimer) => prevTimer + 1), 1000);
+  // useEffect(() => {
+  //   const interval = setInterval(() => setTimer((prevTimer) => prevTimer + 1), 4000);
+  //   return () => clearInterval(interval);
+  // }, []);
 
-    return () => clearInterval(interval);
-  }, []);
-  useEffect(() => {
-    (async function fetchData() {
-      const response = await fetch("https://jsonplaceholder.typicode.com/posts");
-      const data = await response.json();
-      console.log("Fetched Data:", data);
-    })();
-  }, []);
+  useLayoutEffect(() => {
+    // Measure the button width before the browser paints
+    console.log("useLayoutEffect");
+  } ); // Runs when `count` changes
+
+  // useEffect(() => {
+  //   (async function fetchData() {
+  //     const response = await fetch("https://jsonplaceholder.typicode.com/posts");
+  //     const data = await response.json();
+  //     console.log("Fetched Data:", data);
+  //   })();
+  // }, []);
 
   useEffect(() => {
     console.log("Render on every change");
@@ -30,6 +35,7 @@ const UseEffectExample = () => {
   }, [count]);
 
   return (
+    console.log("Render"),
     <>
       <h2>useEffect Example</h2>
       <button onClick={() => setCount(count + 1)}>{count}</button>

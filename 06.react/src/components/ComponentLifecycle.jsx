@@ -1,27 +1,24 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
 export class ComponentLifecycle extends Component {
-
-
   constructor(props) {
     super(props);
     this.state = {
-      name: "prek"
-    }
+      name: "state1",
+    };
   }
   updateProp = () => {
     this.setState({
-      name: "preks"
-    })
-  }
+      name: "state2",
+    });
+  };
   render() {
     return (
       <>
         <Child name={this.state.name}></Child>
         <button onClick={this.updateProp}>Update prop</button>
       </>
-
-    )
+    );
   }
 }
 
@@ -33,26 +30,23 @@ class Child extends ComponentLifecycle {
     this.handleNameChange = this.handleNameChange.bind(this);
   }
 
-  static getDerivedStateFromProps(props, state) { // return null, or state object
+  static getDerivedStateFromProps(props, state) {
+    // return null, or state object
     console.log("getDerivedStateFromProps", props, state);
-    if (props.name !== state.name)
-      return { name: props.name }; // Only update state if the prop has changed
+    if (props.name !== state.name) return { name: props.name }; // Only update state if the prop has changed
     return null;
   }
 
   shouldComponentUpdate(nextProps, nextState) {
-    let result = this.state.name === nextState.name && this.props.name === nextProps.name;
+    let result =
+      this.state.name === nextState.name && this.props.name === nextProps.name;
     console.log("shouldComponentUpdate", !result);
     return !result;
   }
 
   getSnapshotBeforeUpdate(prevProps, prevState) {
-    console.log(
-      "getSnapshotBeforeUpdate",
-      prevProps,
-      prevState
-    );
-    return {prevProps, prevState};
+    console.log("getSnapshotBeforeUpdate", prevProps, prevState);
+    return { prevProps, prevState };
   }
 
   componentDidMount() {
@@ -60,7 +54,9 @@ class Child extends ComponentLifecycle {
   }
 
   componentWillUnmount() {
-    setTimeout(()=> {console.log(1)}, 5000);
+    setTimeout(() => {
+      console.log(1);
+    }, 5000);
     console.log("componentWillUnmount");
   }
   componentDidUpdate(prevProps, prevState, snapshot) {
@@ -69,12 +65,12 @@ class Child extends ComponentLifecycle {
 
   handleNameChange = () => {
     this.setState({
-      name: this.state.name + " hirani"
+      name: this.state.name + " hirani",
     });
   };
 
-  render() { 
-    console.log("rendering")
+  render() {
+    console.log("rendering");
     return (
       <>
         <br /> <br />
@@ -82,30 +78,31 @@ class Child extends ComponentLifecycle {
         <p>Hello, {this.state.name}</p>
         <button onClick={this.handleNameChange}>Click</button>
       </>
-    )
+    );
   }
 }
 
-export default ComponentLifecycle
+export default ComponentLifecycle;
 
 /*
 constuctor: Initialize local state and bind event handlers method,
 Avoid introducing any side effects or subscription(use componentDidMount)
 
-getDerivedStateFromProps: This method allows the component to update its state based on changes in props. //////////////////////// initial mount and on subsequent updates
-
-shouldComponentUpdate: Compares the prev with new value to tell component when to render() or not. //////////////// subsequent updates
+getDerivedStateFromProps(): This method allows the component to update its state based on changes in props.
 
 render() will not be invoked if shouldComponentUpdate() returns false.
 
-componentDidMount() is invoked immediately after a component is mounted (inserted into the tree). Initialization that requires DOM nodes should go here. If you need to load data from a remote endpoint, this is a good place to instantiate the network request. //diff with constructor
+shouldComponentUpdate(): Compares the prev with new value to tell component when to render() or not.
 
-The componentDidUpdate() method is part of React’s Class Component Lifecycle. It is invoked immediately after a component’s updates are flushed to the DOM. This method is commonly used to perform side effects that depend on the new state or props, such as
+getSnapshotBeforeUpdate():It enables your component to capture some information from the DOM before it is potentially changed.
+
+componentDidMount(): This method is commonly used for side effects, such as fetching data, setting up subscriptions, or interacting with third-party libraries
+
+The componentDidUpdate(): It is invoked immediately after a component’s updates are flushed to the DOM. This method is commonly used to perform side effects that depend on the new state or props, such as
 
 componentWillUnmount() is invoked immediately before a component is unmounted and destroyed. Perform any necessary cleanup in this method, such as invalidating timers, canceling network requests, or cleaning up any subscriptions that were created in componentDidMount()
 
 */
-
 
 /*
 Mounting -
