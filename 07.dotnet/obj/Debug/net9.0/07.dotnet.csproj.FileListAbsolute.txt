@@ -1,0 +1,15 @@
+/home/preksha/RiderProjects/training/07.dotnet/bin/Debug/net9.0/07.dotnet
+/home/preksha/RiderProjects/training/07.dotnet/bin/Debug/net9.0/07.dotnet.deps.json
+/home/preksha/RiderProjects/training/07.dotnet/bin/Debug/net9.0/07.dotnet.runtimeconfig.json
+/home/preksha/RiderProjects/training/07.dotnet/bin/Debug/net9.0/07.dotnet.dll
+/home/preksha/RiderProjects/training/07.dotnet/bin/Debug/net9.0/07.dotnet.pdb
+/home/preksha/RiderProjects/training/07.dotnet/obj/Debug/net9.0/07.dotnet.GeneratedMSBuildEditorConfig.editorconfig
+/home/preksha/RiderProjects/training/07.dotnet/obj/Debug/net9.0/07.dotnet.AssemblyInfoInputs.cache
+/home/preksha/RiderProjects/training/07.dotnet/obj/Debug/net9.0/07.dotnet.AssemblyInfo.cs
+/home/preksha/RiderProjects/training/07.dotnet/obj/Debug/net9.0/07.dotnet.csproj.CoreCompileInputs.cache
+/home/preksha/RiderProjects/training/07.dotnet/obj/Debug/net9.0/07.dotnet.sourcelink.json
+/home/preksha/RiderProjects/training/07.dotnet/obj/Debug/net9.0/07.dotnet.dll
+/home/preksha/RiderProjects/training/07.dotnet/obj/Debug/net9.0/refint/07.dotnet.dll
+/home/preksha/RiderProjects/training/07.dotnet/obj/Debug/net9.0/07.dotnet.pdb
+/home/preksha/RiderProjects/training/07.dotnet/obj/Debug/net9.0/07.dotnet.genruntimeconfig.cache
+/home/preksha/RiderProjects/training/07.dotnet/obj/Debug/net9.0/ref/07.dotnet.dll
