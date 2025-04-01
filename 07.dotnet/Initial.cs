@@ -76,7 +76,8 @@ public class Initial
         //     Console.WriteLine("Failed to parse input.");
         // }
         
-        
+        // Exception Handling
+		ExceptionHandling e = new ExceptionHandling();		
         
     }
 }
