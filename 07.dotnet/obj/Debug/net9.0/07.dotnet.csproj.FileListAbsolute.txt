@@ -13,3 +13,18 @@
 /home/preksha/RiderProjects/training/07.dotnet/obj/Debug/net9.0/07.dotnet.pdb
 /home/preksha/RiderProjects/training/07.dotnet/obj/Debug/net9.0/07.dotnet.genruntimeconfig.cache
 /home/preksha/RiderProjects/training/07.dotnet/obj/Debug/net9.0/ref/07.dotnet.dll
+C:\Users\Preksha Hirani\RiderProjects\training\07.dotnet\obj\Debug\net9.0\07.dotnet.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Preksha Hirani\RiderProjects\training\07.dotnet\obj\Debug\net9.0\07.dotnet.AssemblyInfoInputs.cache
+C:\Users\Preksha Hirani\RiderProjects\training\07.dotnet\obj\Debug\net9.0\07.dotnet.AssemblyInfo.cs
+C:\Users\Preksha Hirani\RiderProjects\training\07.dotnet\obj\Debug\net9.0\07.dotnet.csproj.CoreCompileInputs.cache
+C:\Users\Preksha Hirani\RiderProjects\training\07.dotnet\obj\Debug\net9.0\07.dotnet.sourcelink.json
+C:\Users\Preksha Hirani\RiderProjects\training\07.dotnet\obj\Debug\net9.0\07.dotnet.dll
+C:\Users\Preksha Hirani\RiderProjects\training\07.dotnet\obj\Debug\net9.0\refint\07.dotnet.dll
+C:\Users\Preksha Hirani\RiderProjects\training\07.dotnet\obj\Debug\net9.0\07.dotnet.pdb
+C:\Users\Preksha Hirani\RiderProjects\training\07.dotnet\bin\Debug\net9.0\07.dotnet.exe
+C:\Users\Preksha Hirani\RiderProjects\training\07.dotnet\bin\Debug\net9.0\07.dotnet.deps.json
+C:\Users\Preksha Hirani\RiderProjects\training\07.dotnet\bin\Debug\net9.0\07.dotnet.runtimeconfig.json
+C:\Users\Preksha Hirani\RiderProjects\training\07.dotnet\bin\Debug\net9.0\07.dotnet.dll
+C:\Users\Preksha Hirani\RiderProjects\training\07.dotnet\bin\Debug\net9.0\07.dotnet.pdb
+C:\Users\Preksha Hirani\RiderProjects\training\07.dotnet\obj\Debug\net9.0\07.dotnet.genruntimeconfig.cache
+C:\Users\Preksha Hirani\RiderProjects\training\07.dotnet\obj\Debug\net9.0\ref\07.dotnet.dll

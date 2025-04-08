@@ -8,19 +8,19 @@
     "net9.0": []
   },
   "packageFolders": {
-    "/home/preksha/.nuget/packages/": {}
+    "C:\\Users\\Preksha Hirani\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/preksha/RiderProjects/training/07.dotnet/07.dotnet.csproj",
+      "projectUniqueName": "C:\\Users\\Preksha Hirani\\RiderProjects\\training\\07.dotnet\\07.dotnet.csproj",
       "projectName": "07.dotnet",
-      "projectPath": "/home/preksha/RiderProjects/training/07.dotnet/07.dotnet.csproj",
-      "packagesPath": "/home/preksha/.nuget/packages/",
-      "outputPath": "/home/preksha/RiderProjects/training/07.dotnet/obj/",
+      "projectPath": "C:\\Users\\Preksha Hirani\\RiderProjects\\training\\07.dotnet\\07.dotnet.csproj",
+      "packagesPath": "C:\\Users\\Preksha Hirani\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Preksha Hirani\\RiderProjects\\training\\07.dotnet\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/preksha/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\Preksha Hirani\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
@@ -65,7 +65,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/home/preksha/.dotnet/sdk/9.0.200/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Users\\Preksha Hirani\\.dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

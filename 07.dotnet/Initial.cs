@@ -1,3 +1,4 @@
+using DefaultNamespace;
 namespace _07.dotnet;
 
 public class Initial
@@ -77,7 +78,14 @@ public class Initial
         // }
         
         // Exception Handling
-		ExceptionHandling e = new ExceptionHandling();		
+		ExceptionHandling e = new ExceptionHandling();	
+        e.ExceptionHandler();
         
+        // C# Concepts
+        // Nullable Example
+        Console.WriteLine("////////////////////////////////////");
+        Concepts c = new Concepts();
+        c.NullableExample();
+        c.EnumerableExample();
     }
 }
