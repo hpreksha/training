@@ -23,7 +23,7 @@ public class Concepts
     
     public void EnumerableExample()
     {
-        List<int> numbers = new List<int> {1,2,3,4};
+        List<int> numbers = new List<int> {1,2,3,4} ;
         foreach (var number in numbers) 
         {
             Console.WriteLine($"IEnumerableExample {number}");
